@@ -1,1 +1,2 @@
-# tagion_paper
+# tagion-paper
+Tagion technical white paper
