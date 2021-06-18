@@ -1,0 +1,30 @@
+\section{Hashgraph Consensus Mechanism} \label{sec:hashgraph_cm}
+The Tagion network is based around a Hashgraph consensus algorithm and mathematical proof discovered by Leemon Baird \cite{SWIRLDS_HASHGRAPH}. This algorithm solves the Byzantine Generals’ Problem of generating a consensus order list of actions between distributed computer nodes connected in a network.
+If more than 2/3 of the nodes follows the same consensus rules, all the nodes will, in finite time, reach the same order of events.
+The network distributes the information via a gossip protocol, sending information about the data received from the other nodes in the network. All the nodes solving the Hashgraph algorithm will come to the same order of transactions.
+Figure 1 below shows a Hashgraph of gossip information representing the information flow between network nodes. In finite time all nodes in the network will be able to build the same Hashgraph of gossip information.
+
+
+\begin{figure}[ht]
+ \centering
+ % Replace this when we get the wavefront in
+ \includegraphics[width=0.7\textwidth]{fig/wavefront_and_order_long.eps}
+% \includegraphics[width=0.45\textwidth]{fig/wavefront_and_order_small_no_alt.eps}
+ % wavefront_and_order.eps: 3358x4625 px, 300dpi, 28.43x39.16 cm, bb=0 0 806 1110
+ %\caption{Hashgraph with altitude(A) and parameter $\Omega$}
+ \caption{Hashgraph with parameter $\Omega$}
+ \label{fig:wavefront}
+\end{figure}
+
+% Hashgraph with altitude (A) order parameter Ω is shown. 
+Each vertical line represents a compute node and each circle an event. The line between the events represents the communication of the events between the nodes. 
+The events coloured red define a witness that is used to divide the consensus into rounds. Each round decides a list of events to be collected. This list of events is called an epoch and must be sorted into the same order as all other nodes. The description of the Hashgraph algorithm can be found in \cite{SWIRLDS_HASHGRAPH}.
+
+% We take this out for now because of patent issues
+\pagebreak
+
+\input{wavefront}
+
+\pagebreak
+
+\input{consensus_ordering}

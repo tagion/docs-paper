@@ -1,0 +1,1436 @@
+<?xml version="1.0" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.7a -->
+<!-- CreationDate: 2021-02-25 19:44:21 -->
+<!-- Magnification: 1.05 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="1200pt" height="1266pt"
+	viewBox="316 -269 19046 20084">
+<g fill="none">
+<!-- Line -->
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 8828,3769 8811,3902 8694,3968 9026,4076 9054,4034z"/>
+</clipPath>
+</defs>
+<polyline points=" 6326,2241 9019,4041" clip-path="url(#cp0)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 9019,4041 -->
+<polygon points=" 8694,3968 9010,4035 8828,3769 8811,3902 8694,3968"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 8828,3769 9010,4035 8811,3902 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp1">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 9680,15510 9546,15519 9459,15417 9417,15764 9464,15783z"/>
+</clipPath>
+</defs>
+<polyline points=" 10575,13050 9450,15750" clip-path="url(#cp1)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 9450,15750 -->
+<polygon points=" 9459,15417 9454,15740 9680,15510 9546,15519 9459,15417"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 9680,15510 9454,15740 9546,15519 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp2">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 10408,15485 10360,15611 10231,15648 10529,15831 10566,15796z"/>
+</clipPath>
+</defs>
+<polyline points=" 9450,14625 10530,15795" clip-path="url(#cp2)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 10530,15795 -->
+<polygon points=" 10231,15648 10523,15787 10408,15485 10360,15611 10231,15648
+"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 10408,15485 10523,15787 10360,15611 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp3">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 8105,13935 7971,13944 7884,13842 7842,14189 7889,14208z"/>
+</clipPath>
+</defs>
+<polyline points=" 9000,11475 7875,14175" clip-path="url(#cp3)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 7875,14175 -->
+<polygon points=" 7884,13842 7879,14165 8105,13935 7971,13944 7884,13842"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 8105,13935 7879,14165 7971,13944 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp4">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 8865,13871 8823,13998 8696,14040 9000,14211 9036,14175z"/>
+</clipPath>
+</defs>
+<polyline points=" 7875,13050 9000,14175" clip-path="url(#cp4)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 9000,14175 -->
+<polygon points=" 8696,14040 8993,14168 8865,13871 8823,13998 8696,14040"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 8865,13871 8993,14168 8823,13998 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp5">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 10440,10721 10398,10848 10271,10890 10575,11061 10611,11025z"/>
+</clipPath>
+</defs>
+<polyline points=" 9450,9900 10575,11025" clip-path="url(#cp5)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 10575,11025 -->
+<polygon points=" 10271,10890 10568,11018 10440,10721 10398,10848 10271,10890
+"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 10440,10721 10568,11018 10398,10848 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp6">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 5029,14040 4902,13998 4860,13871 4689,14175 4725,14211z"/>
+</clipPath>
+</defs>
+<polyline points=" 5850,13050 4725,14175" clip-path="url(#cp6)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 4725,14175 -->
+<polygon points=" 4860,13871 4732,14168 5029,14040 4902,13998 4860,13871"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 5029,14040 4732,14168 4902,13998 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp7">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 5715,12296 5673,12423 5546,12465 5850,12636 5886,12600z"/>
+</clipPath>
+</defs>
+<polyline points=" 4725,11475 5850,12600" clip-path="url(#cp7)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 5850,12600 -->
+<polygon points=" 5546,12465 5843,12593 5715,12296 5673,12423 5546,12465"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 5715,12296 5843,12593 5673,12423 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp8">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 7286,12297 7246,12425 7119,12469 7425,12636 7461,12600z"/>
+</clipPath>
+</defs>
+<polyline points=" 4694,9942 7425,12600" clip-path="url(#cp8)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 7425,12600 -->
+<polygon points=" 7119,12469 7418,12593 7286,12297 7246,12425 7119,12469"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 7286,12297 7418,12593 7246,12425 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp9">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 8703,8060 8712,8194 8611,8282 8958,8322 8977,8275z"/>
+</clipPath>
+</defs>
+<polyline points=" 6373,7229 8944,8289" clip-path="url(#cp9)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 8944,8289 -->
+<polygon points=" 8611,8282 8934,8285 8703,8060 8712,8194 8611,8282"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 8703,8060 8934,8285 8712,8194 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp10">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 4141,6570 4109,6700 3986,6753 4303,6898 4336,6859z"/>
+</clipPath>
+</defs>
+<polyline points=" 3141,5878 4300,6862" clip-path="url(#cp10)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 4300,6862 -->
+<polygon points=" 3986,6753 4292,6855 4141,6570 4109,6700 3986,6753"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 4141,6570 4292,6855 4109,6700 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp11">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 4126,5084 4101,5216 3981,5275 4306,5403 4337,5362z"/>
+</clipPath>
+</defs>
+<polyline points=" 3150,4496 4301,5367" clip-path="url(#cp11)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 4301,5367 -->
+<polygon points=" 3981,5275 4293,5361 4126,5084 4101,5216 3981,5275"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 4126,5084 4293,5361 4101,5216 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp12">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 3448,3878 3318,3845 3265,3722 3119,4039 3158,4072z"/>
+</clipPath>
+</defs>
+<polyline points=" 5844,884 3155,4036" clip-path="url(#cp12)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 3155,4036 -->
+<polygon points=" 3265,3722 3162,4028 3448,3878 3318,3845 3265,3722"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 3448,3878 3162,4028 3318,3845 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp13">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 6640,5315 6519,5258 6491,5127 6286,5409 6318,5449z"/>
+</clipPath>
+</defs>
+<polyline points=" 7463,4513 6322,5413" clip-path="url(#cp13)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 6322,5413 -->
+<polygon points=" 6491,5127 6330,5407 6640,5315 6519,5258 6491,5127"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 6640,5315 6330,5407 6519,5258 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp14">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 9675,6636 9541,6638 9459,6531 9398,6875 9444,6897z"/>
+</clipPath>
+</defs>
+<polyline points=" 10575,4500 9432,6863" clip-path="url(#cp14)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 9432,6863 -->
+<polygon points=" 9459,6531 9437,6854 9675,6636 9541,6638 9459,6531"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 9675,6636 9437,6854 9541,6638 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp15">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 3483,15741 3381,15654 3390,15520 3117,15736 3136,15783z"/>
+</clipPath>
+</defs>
+<polyline points=" 5850,14625 3150,15750" clip-path="url(#cp15)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 3150,15750 -->
+<polygon points=" 3390,15520 3160,15746 3483,15741 3381,15654 3390,15520"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 3483,15741 3160,15746 3381,15654 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp16">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 6633,17281 6534,17190 6547,17057 6267,17265 6285,17313z"/>
+</clipPath>
+</defs>
+<polyline points=" 9000,16245 6300,17280" clip-path="url(#cp16)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 6300,17280 -->
+<polygon points=" 6547,17057 6310,17276 6633,17281 6534,17190 6547,17057"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 6633,17281 6310,17276 6534,17190 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp17">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 6567,15633 6442,15584 6407,15454 6219,15748 6253,15786z"/>
+</clipPath>
+</defs>
+<polyline points=" 7470,14670 6255,15750" clip-path="url(#cp17)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 6255,15750 -->
+<polygon points=" 6407,15454 6263,15743 6567,15633 6442,15584 6407,15454"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 6567,15633 6263,15743 6442,15584 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp18">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 3528,17314 3426,17227 3434,17093 3162,17311 3181,17358z"/>
+</clipPath>
+</defs>
+<polyline points=" 5850,16200 3195,17325" clip-path="url(#cp18)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 3195,17325 -->
+<polygon points=" 3434,17093 3205,17321 3528,17314 3426,17227 3434,17093"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 3528,17314 3205,17321 3426,17227 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp19">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 5058,17316 4956,17229 4965,17095 4692,17311 4711,17358z"/>
+</clipPath>
+</defs>
+<polyline points=" 7425,16200 4725,17325" clip-path="url(#cp19)"
+	stroke="#87cfff" stroke-width="45px"/>
+<!-- Forward arrow to point 4725,17325 -->
+<polygon points=" 4965,17095 4735,17321 5058,17316 4956,17229 4965,17095"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 5058,17316 4735,17321 4956,17229 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp20">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 4140,10721 4098,10848 3971,10890 4275,11061 4311,11025z"/>
+</clipPath>
+</defs>
+<polyline points=" 3150,9900 4275,11025" clip-path="url(#cp20)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 4275,11025 -->
+<polygon points=" 3971,10890 4268,11018 4140,10721 4098,10848 3971,10890"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 4140,10721 4268,11018 4098,10848 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp21">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 7249,9151 7231,9284 7114,9349 7445,9460 7473,9418z"/>
+</clipPath>
+</defs>
+<polyline points=" 6330,8668 7438,9425" clip-path="url(#cp21)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 7438,9425 -->
+<polygon points=" 7114,9349 7429,9419 7249,9151 7231,9284 7114,9349"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 7249,9151 7429,9419 7231,9284 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp22">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 5709,7921 5683,8052 5563,8111 5887,8241 5918,8200z"/>
+</clipPath>
+</defs>
+<polyline points=" 4749,7334 5882,8205" clip-path="url(#cp22)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 5882,8205 -->
+<polygon points=" 5563,8111 5874,8199 5709,7921 5683,8052 5563,8111"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 5709,7921 5874,8199 5683,8052 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp23">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 5707,6565 5675,6695 5552,6748 5869,6893 5902,6854z"/>
+</clipPath>
+</defs>
+<polyline points=" 4707,5873 5866,6857" clip-path="url(#cp23)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 5866,6857 -->
+<polygon points=" 5552,6748 5858,6850 5707,6565 5675,6695 5552,6748"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 5707,6565 5858,6850 5675,6695 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp24">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 7191,3837 7190,3971 7082,4051 7424,4119 7447,4074z"/>
+</clipPath>
+</defs>
+<polyline points=" 6300,3518 7413,4085" clip-path="url(#cp24)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 7413,4085 -->
+<polygon points=" 7082,4051 7404,4080 7191,3837 7190,3971 7082,4051"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 7191,3837 7404,4080 7190,3971 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp25">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 5060,9492 4977,9386 5012,9257 4702,9416 4712,9466z"/>
+</clipPath>
+</defs>
+<polyline points=" 8940,8583 4732,9436" clip-path="url(#cp25)"
+	stroke="#00ff00" stroke-width="45px"/>
+<!-- Forward arrow to point 4732,9436 -->
+<polygon points=" 5012,9257 4742,9434 5060,9492 4977,9386 5012,9257"
+	stroke="#00ff00" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 5060,9492 4742,9434 4977,9386 z"
+	stroke="#00ff00" stroke-width="8px" stroke-miterlimit="8" fill="#00ff00"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp26">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 8991,12267 8904,12369 8770,12360 8986,12633 9033,12614z"/>
+</clipPath>
+</defs>
+<polyline points=" 7875,9900 9000,12600" clip-path="url(#cp26)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 9000,12600 -->
+<polygon points=" 8770,12360 8996,12590 8991,12267 8904,12369 8770,12360"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 8991,12267 8996,12590 8904,12369 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp27">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 4266,15417 4179,15519 4045,15510 4261,15783 4308,15764z"/>
+</clipPath>
+</defs>
+<polyline points=" 3150,13050 4275,15750" clip-path="url(#cp27)"
+	stroke="#87cfff" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Forward arrow to point 4275,15750 -->
+<polygon points=" 4045,15510 4271,15740 4266,15417 4179,15519 4045,15510"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8"/>
+<path d="M 4266,15417 4271,15740 4179,15519 z"
+	stroke="#87cfff" stroke-width="8px" stroke-miterlimit="8" fill="#87cfff"/>
+<!-- Line -->
+<polyline points=" 10800,18675 10800,11025"
+	stroke="#000000" stroke-width="45px"/>
+<!-- Line -->
+<polyline points=" 10800,11250 10800,-225"
+	stroke="#000000" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Line -->
+<polyline points=" 9225,18675 9225,9675"
+	stroke="#000000" stroke-width="45px"/>
+<!-- Line -->
+<polyline points=" 9225,9900 9225,8775"
+	stroke="#00ff00" stroke-width="45px"/>
+<!-- Line -->
+<polyline points=" 9225,8550 9225,-225"
+	stroke="#000000" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Line -->
+<polyline points=" 7650,18675 7650,12825"
+	stroke="#000000" stroke-width="45px"/>
+<!-- Line -->
+<polyline points=" 7650,12825 7650,-225"
+	stroke="#000000" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Line -->
+<polyline points=" 6075,18675 6075,12825"
+	stroke="#000000" stroke-width="45px"/>
+<!-- Line -->
+<polyline points=" 6075,12825 6075,-225"
+	stroke="#000000" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Line -->
+<polyline points=" 4500,18675 4500,15975"
+	stroke="#000000" stroke-width="45px"/>
+<!-- Line -->
+<polyline points=" 2925,18675 2925,15975"
+	stroke="#000000" stroke-width="45px"/>
+<!-- Line -->
+<polyline points=" 4500,15975 4500,-225"
+	stroke="#000000" stroke-width="45px" stroke-dasharray="75 38 10 38"/>
+<!-- Line -->
+<polyline points=" 2925,15975 2925,-225"
+	stroke="#000000" stroke-width="45px" stroke-dasharray="70 35 10 35"/>
+<!-- Circle -->
+<defs>
+<circle cx="4500" cy="15975" r="318" id="p0"/>
+<pattern id="tile0" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p0" fill="#ffffff"/>
+<use xlink:href="#p0" fill="url(#tile0)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4050" y="15525" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="4500" cy="11250" r="318" id="p1"/>
+<pattern id="tile1" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p1" fill="#ffffff"/>
+<use xlink:href="#p1" fill="url(#tile1)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4050" y="10800" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="10800" cy="9675" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="10350" y="9225" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="4500" cy="9675" r="318" id="p2"/>
+<pattern id="tile2" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p2" fill="#ffff00"/>
+<use xlink:href="#p2" fill="url(#tile2)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4095" y="9225" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="6075" cy="5625" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="5175" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="2925" cy="9675" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="2475" y="9225" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="9225" cy="12825" r="318" id="p3"/>
+<pattern id="tile3" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,63 71,138 M 63,-4 138,71"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p3" fill="#ffffff"/>
+<use xlink:href="#p3" fill="url(#tile3)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="8775" y="12375" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="9225" cy="11250" r="318" id="p4"/>
+<pattern id="tile4" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,63 71,138 M 63,-4 138,71"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p4" fill="#ffffff"/>
+<use xlink:href="#p4" fill="url(#tile4)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="8775" y="10800" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="9225" cy="9675" r="318" id="p5"/>
+<pattern id="tile5" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,63 71,138 M 63,-4 138,71"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p5" fill="#ffff00"/>
+<use xlink:href="#p5" fill="url(#tile5)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="8775" y="9225" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="9225" cy="8457" r="318" fill="#00ff00"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="8775" y="7875" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="10800" cy="4275" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="10350" y="3825" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="9225" cy="7085" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="8775" y="6503" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="6075" cy="17550" r="318" id="p6"/>
+<pattern id="tile6" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p6" fill="#ffffff"/>
+<use xlink:href="#p6" fill="url(#tile6)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="17100" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="4500" cy="17550" r="318" id="p7"/>
+<pattern id="tile7" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p7" fill="#ffffff"/>
+<use xlink:href="#p7" fill="url(#tile7)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4050" y="17100" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="2925" cy="17550" r="318" id="p8"/>
+<pattern id="tile8" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p8" fill="#ffffff"/>
+<use xlink:href="#p8" fill="url(#tile8)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="2475" y="17100" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="2925" cy="15975" r="318" id="p9"/>
+<pattern id="tile9" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p9" fill="#ffffff"/>
+<use xlink:href="#p9" fill="url(#tile9)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="2475" y="15525" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="6075" cy="15975" r="318" id="p10"/>
+<pattern id="tile10" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p10" fill="#ffffff"/>
+<use xlink:href="#p10" fill="url(#tile10)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="15525" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="10800" cy="15975" r="318" id="p11"/>
+<pattern id="tile11" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p11" fill="#ffffff"/>
+<use xlink:href="#p11" fill="url(#tile11)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="10350" y="15525" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="4500" cy="14400" r="318" id="p12"/>
+<pattern id="tile12" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p12" fill="#ffffff"/>
+<use xlink:href="#p12" fill="url(#tile12)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4050" y="13950" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="6075" cy="14400" r="318" id="p13"/>
+<pattern id="tile13" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p13" fill="#ffffff"/>
+<use xlink:href="#p13" fill="url(#tile13)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="13950" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="2925" cy="12825" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="2475" y="12375" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="6075" cy="12825" r="318" id="p14"/>
+<pattern id="tile14" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p14" fill="#ffffff"/>
+<use xlink:href="#p14" fill="url(#tile14)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="12375" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="7650" cy="15975" r="318" id="p15"/>
+<pattern id="tile15" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p15" fill="#ffffff"/>
+<use xlink:href="#p15" fill="url(#tile15)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="7200" y="15525" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="7650" cy="14400" r="318" id="p16"/>
+<pattern id="tile16" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p16" fill="#ffffff"/>
+<use xlink:href="#p16" fill="url(#tile16)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="7200" y="13950" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="9225" cy="15975" r="318" id="p17"/>
+<pattern id="tile17" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p17" fill="#ffffff"/>
+<use xlink:href="#p17" fill="url(#tile17)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="8775" y="15525" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="9225" cy="14400" r="318" id="p18"/>
+<pattern id="tile18" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p18" fill="#ffffff"/>
+<use xlink:href="#p18" fill="url(#tile18)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="8775" y="13950" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="7650" cy="12825" r="318" id="p19"/>
+<pattern id="tile19" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p19" fill="#ffffff"/>
+<use xlink:href="#p19" fill="url(#tile19)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="7200" y="12375" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="7650" cy="11250" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="7200" y="10800" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="7650" cy="9675" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="7200" y="9225" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="10800" cy="12825" r="318" id="p20"/>
+<pattern id="tile20" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,63 71,138 M 63,-4 138,71"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p20" fill="#ffffff"/>
+<use xlink:href="#p20" fill="url(#tile20)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="10350" y="12375" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="10800" cy="11250" r="318" id="p21"/>
+<pattern id="tile21" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,63 71,138 M 63,-4 138,71"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p21" fill="#ffffff"/>
+<use xlink:href="#p21" fill="url(#tile21)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="10350" y="10800" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="6075" cy="8457" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="8100" width="1575" height="675"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="6075" cy="7107" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="6525" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="4500" cy="7107" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4095" y="6750" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="2925" cy="4275" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="2520" y="3825" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="6075" cy="900" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="450" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="2925" cy="5625" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="2475" y="5175" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="4500" cy="5625" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="4050" y="5175" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="6075" cy="3375" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="2925" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="7650" cy="4275" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="7200" y="3825" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="6075" cy="2250" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="1800" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="9225" cy="4275" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="8775" y="3825" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="6075" cy="9675" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="5625" y="9225" width="1575" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="18900" cy="7650" r="318" id="p22"/>
+<pattern id="tile22" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p22" fill="#ffffff"/>
+<use xlink:href="#p22" fill="url(#tile22)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="13950" y="7200" width="5400" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="18900" cy="8550" r="318" id="p23"/>
+<pattern id="tile23" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,63 71,138 M 63,-4 138,71"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p23" fill="#ffff00"/>
+<use xlink:href="#p23" fill="url(#tile23)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="13950" y="8100" width="5400" height="900"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Line -->
+<rect x="13950" y="8100" width="5400" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="18900" cy="9450" r="318" id="p24"/>
+<pattern id="tile24" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,63 71,138 M 63,-4 138,71"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p24" fill="#ffffff"/>
+<use xlink:href="#p24" fill="url(#tile24)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="13950" y="9000" width="5400" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="18900" cy="10350" r="318" id="p25"/>
+<pattern id="tile25" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M-4,63 71,138 M63,-4 138,71 M-4,71 71,-4 M63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p25" fill="#ffffff"/>
+<use xlink:href="#p25" fill="url(#tile25)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="13950" y="9900" width="5400" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="18900" cy="4497" r="318" fill="#2f4859"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="15750" y="4050" width="3600" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<defs>
+<circle cx="18900" cy="6750" r="318" id="p26"/>
+<pattern id="tile26" patternUnits="userSpaceOnUse"
+	x="0" y="0" width="134" height="134">
+<g stroke-width="7.5" stroke="#000000" fill="none">
+<path d="M -4,71 71,-4 M 63,138 138,63"/>
+</g>
+</pattern>
+</defs>
+<use xlink:href="#p26" fill="#ffff00"/>
+<use xlink:href="#p26" fill="url(#tile26)"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="15075" y="6300" width="4275" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Circle -->
+<circle cx="18900" cy="5850" r="318" fill="#00ff00"
+	stroke="#000000" stroke-width="30px"/>
+<!-- Line -->
+<rect x="15075" y="5400" width="4275" height="900"
+	stroke="#ffffff" stroke-width="8px"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp28">
+	<path clip-rule="evenodd" d="M 316,-269 H 19362 V 19815 H 316 z
+		M 1515,95 1575,35 1635,95 1601,-250 1550,-250z"/>
+</clipPath>
+</defs>
+<polyline points=" 1575,18675 1575,-225" clip-path="url(#cp28)"
+	stroke="#0000d1" stroke-width="45px"/>
+<!-- Forward arrow to point 1575,-225 -->
+<polygon points=" 1635,95 1575,-205 1515,95 1575,35 1635,95"
+	stroke="#0000d1" stroke-width="8px" stroke-miterlimit="8" fill="#0000d1"/>
+<!-- Line -->
+<polyline points=" 534,16562 2384,16192 2604,16102 2774,15972 2884,15862 2994,15652 3044,15462
+ 3214,14762 3484,13352 3774,11872 3984,10582 4164,9992 4384,9772 4494,9732 4664,9732
+ 4904,9812 5074,9962 5174,10162 5274,10462 5474,11272 5694,12012 5884,12482 5994,12602
+ 6224,12792 6644,12862 7414,12922 7894,13022 8314,13292 8694,13672 9224,14312
+ 9724,14832 10344,15422 10744,15772 11084,15972 11504,16052 12164,16122 13064,16122
+"
+	stroke="#d100d1" stroke-width="45px" stroke-dasharray="100 100"/>
+<!-- Line -->
+<polyline points=" 360,17910 361,17910 363,17910 367,17910 373,17909 382,17908 394,17908 409,17907
+ 428,17905 451,17904 477,17902 507,17900 540,17897 577,17895 617,17892 659,17889
+ 705,17886 753,17882 803,17879 854,17875 907,17872 962,17868 1017,17864 1074,17860
+ 1131,17856 1188,17852 1247,17848 1305,17844 1364,17840 1424,17836 1484,17831
+ 1544,17827 1605,17823 1666,17819 1728,17814 1791,17810 1854,17806 1917,17801
+ 1981,17797 2045,17792 2109,17788 2172,17783 2235,17779 2295,17775 2391,17768
+ 2477,17763 2550,17758 2611,17754 2658,17751 2694,17750 2719,17749 2734,17749
+ 2742,17750 2743,17751 2739,17752 2732,17754 2722,17756 2713,17758 2704,17760
+ 2698,17762 2695,17763 2697,17763 2704,17763 2719,17762 2742,17759 2773,17756
+ 2812,17751 2859,17745 2912,17738 2970,17730 3025,17722 3078,17713 3128,17705
+ 3175,17697 3216,17689 3252,17682 3284,17676 3310,17671 3333,17666 3352,17661
+ 3368,17658 3381,17654 3394,17651 3405,17647 3416,17644 3428,17641 3442,17637
+ 3458,17633 3476,17628 3498,17623 3524,17617 3555,17610 3590,17602 3630,17593
+ 3674,17583 3722,17572 3773,17561 3825,17550 3884,17537 3938,17525 3986,17515
+ 4027,17506 4061,17499 4089,17494 4110,17490 4127,17488 4138,17486 4147,17486
+ 4154,17486 4159,17486 4164,17487 4169,17486 4177,17486 4186,17484 4199,17482
+ 4217,17477 4238,17472 4265,17464 4296,17454 4332,17443 4370,17430 4410,17415
+ 4455,17397 4495,17380 4528,17366 4552,17356 4568,17349 4578,17345 4581,17344
+ 4580,17345 4576,17348 4571,17351 4566,17354 4563,17355 4563,17354 4568,17349
+ 4580,17340 4599,17324 4628,17302 4666,17272 4714,17234 4770,17190 4807,17160
+ 4845,17129 4882,17098 4917,17069 4950,17041 4980,17015 5008,16992 5033,16971
+ 5055,16952 5075,16935 5093,16920 5109,16907 5123,16895 5136,16884 5148,16874
+ 5160,16864 5172,16854 5184,16843 5198,16831 5212,16818 5229,16804 5247,16787
+ 5268,16769 5291,16747 5318,16722 5347,16695 5380,16664 5416,16630 5455,16593
+ 5495,16553 5538,16512 5580,16470 5627,16422 5671,16378 5710,16337 5743,16302
+ 5770,16272 5791,16249 5807,16232 5817,16219 5822,16212 5823,16209 5821,16208
+ 5817,16211 5811,16214 5805,16219 5799,16223 5794,16226 5791,16226 5790,16224
+ 5794,16217 5802,16205 5816,16187 5837,16162 5865,16129 5901,16088 5944,16038
+ 5996,15979 6055,15913 6120,15840 6164,15791 6208,15742 6253,15692 6296,15644
+ 6339,15596 6381,15551 6420,15508 6457,15467 6493,15429 6526,15394 6556,15361
+ 6585,15331 6611,15303 6636,15278 6659,15254 6680,15233 6700,15213 6719,15194
+ 6737,15177 6754,15160 6771,15144 6788,15127 6804,15111 6821,15095 6838,15078
+ 6856,15060 6875,15041 6895,15020 6917,14997 6940,14973 6965,14946 6992,14917
+ 7021,14885 7052,14850 7086,14812 7122,14771 7160,14727 7200,14680 7243,14631
+ 7287,14578 7332,14524 7378,14468 7424,14412 7470,14355 7527,14283 7580,14215
+ 7629,14152 7672,14094 7711,14043 7744,13998 7771,13960 7794,13928 7813,13902
+ 7827,13881 7838,13866 7845,13854 7850,13846 7853,13840 7854,13837 7853,13835
+ 7852,13834 7851,13833 7851,13831 7851,13828 7852,13823 7854,13816 7859,13805
+ 7866,13791 7875,13772 7888,13748 7904,13719 7923,13684 7946,13643 7972,13597
+ 8001,13545 8032,13488 8066,13428 8100,13365 8134,13301 8167,13239 8198,13179
+ 8227,13123 8253,13071 8277,13024 8297,12982 8315,12945 8331,12912 8344,12883
+ 8355,12859 8364,12838 8372,12820 8378,12804 8383,12790 8388,12777 8393,12765
+ 8397,12753 8401,12740 8406,12726 8412,12711 8419,12693 8427,12673 8437,12649
+ 8448,12622 8462,12590 8478,12555 8495,12514 8515,12470 8538,12421 8562,12368
+ 8587,12312 8613,12254 8640,12195 8672,12126 8701,12061 8728,12001 8752,11949
+ 8773,11905 8790,11867 8805,11837 8817,11814 8826,11796 8833,11783 8839,11773
+ 8844,11767 8847,11763 8850,11760 8853,11757 8856,11753 8860,11748 8864,11740
+ 8870,11728 8877,11712 8886,11691 8897,11665 8910,11632 8926,11593 8943,11548
+ 8961,11497 8980,11442 9000,11385 9019,11328 9036,11272 9052,11221 9065,11174
+ 9077,11133 9087,11097 9094,11066 9101,11041 9106,11020 9109,11003 9112,10989
+ 9114,10977 9115,10967 9116,10957 9117,10948 9118,10938 9120,10927 9121,10914
+ 9124,10898 9127,10878 9130,10855 9135,10827 9141,10795 9148,10758 9155,10716
+ 9163,10671 9172,10624 9180,10575 9190,10515 9198,10461 9204,10413 9209,10373
+ 9212,10340 9214,10315 9215,10295 9214,10281 9213,10271 9212,10263 9210,10256
+ 9208,10250 9207,10243 9205,10235 9204,10224 9204,10209 9205,10190 9207,10166
+ 9210,10138 9214,10106 9219,10071 9225,10035 9235,9985 9244,9945 9251,9918 9257,9902
+ 9261,9895 9264,9894 9266,9896 9269,9899 9272,9899 9276,9895 9283,9885 9291,9867
+ 9302,9841 9315,9810 9328,9779 9338,9751 9347,9729 9352,9713 9356,9701 9358,9693
+ 9360,9686 9362,9680 9364,9672 9368,9662 9373,9648 9382,9630 9392,9608 9405,9585
+ 9419,9561 9431,9544 9438,9533 9442,9527 9443,9525 9442,9525 9444,9525 9449,9522
+ 9459,9516 9474,9506 9495,9495 9518,9485 9538,9477 9553,9471 9563,9468 9569,9466
+ 9574,9465 9579,9464 9586,9463 9598,9461 9617,9458 9643,9454 9675,9450 9704,9447
+ 9729,9445 9750,9443 9765,9442 9777,9441 9785,9440 9791,9439 9798,9438 9806,9438
+ 9816,9438 9831,9439 9851,9441 9874,9445 9900,9450 9928,9458 9949,9466 9962,9472
+ 9969,9476 9971,9478 9971,9480 9971,9482 9973,9486 9979,9492 9991,9503 10010,9519
+ 10035,9540 10057,9559 10077,9577 10093,9590 10104,9599 10112,9604 10117,9606
+ 10121,9608 10125,9609 10131,9613 10139,9621 10151,9634 10168,9655 10190,9684
+ 10215,9720 10233,9747 10249,9774 10264,9798 10276,9819 10285,9836 10293,9850
+ 10299,9860 10303,9869 10306,9875 10309,9881 10311,9887 10315,9895 10319,9904
+ 10324,9916 10331,9932 10340,9952 10351,9977 10364,10008 10379,10042 10395,10080
+ 10410,10118 10424,10153 10436,10185 10446,10211 10453,10232 10458,10248 10462,10260
+ 10464,10270 10465,10277 10466,10283 10467,10288 10468,10295 10471,10305 10474,10317
+ 10479,10333 10485,10354 10494,10380 10504,10412 10517,10447 10530,10485 10545,10527
+ 10558,10564 10569,10595 10577,10620 10583,10638 10587,10651 10589,10659 10590,10665
+ 10590,10669 10590,10673 10592,10678 10594,10686 10599,10699 10606,10716 10616,10740
+ 10629,10770 10646,10806 10665,10845 10683,10881 10701,10914 10717,10943 10731,10969
+ 10743,10989 10752,11006 10760,11020 10767,11031 10772,11040 10778,11048 10783,11055
+ 10788,11064 10795,11073 10803,11085 10812,11099 10824,11116 10838,11136 10854,11158
+ 10872,11182 10890,11205 10914,11234 10933,11255 10946,11269 10953,11276 10954,11278
+ 10953,11276 10950,11272 10947,11269 10946,11266 10949,11265 10957,11267 10972,11273
+ 10995,11283 11025,11295 11050,11305 11075,11314 11096,11322 11113,11328 11125,11333
+ 11134,11337 11139,11340 11142,11342 11145,11344 11148,11346 11153,11348 11161,11350
+ 11173,11354 11192,11358 11217,11364 11251,11370 11292,11377 11340,11385 11378,11390
+ 11415,11395 11451,11400 11482,11403 11510,11406 11533,11409 11552,11411 11568,11412
+ 11581,11413 11592,11414 11601,11415 11610,11415 11619,11415 11628,11416 11640,11416
+ 11654,11417 11672,11418 11694,11419 11720,11420 11752,11422 11789,11424 11831,11426
+ 11877,11428 11925,11430 11973,11432 12020,11433 12065,11434 12107,11435 12146,11435
+ 12182,11436 12217,11436 12249,11436 12280,11436 12309,11435 12337,11435 12364,11434
+ 12389,11434 12412,11433 12434,11432 12453,11432 12469,11431 12483,11431 12493,11431
+ 12501,11430 12506,11430 12509,11430 12510,11430"
+	stroke="#ff8080" stroke-width="45px" stroke-linejoin="bevel" stroke-dasharray="100 100"/>
+<!-- Text -->
+<text xml:space="preserve" x="4320" y="16020" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">b1</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="16245" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#50;</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="15930" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-5</text>
+<!-- Text -->
+<text xml:space="preserve" x="4320" y="11295" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">b4</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="11520" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#52;</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="11205" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-3</text>
+<!-- Text -->
+<text xml:space="preserve" x="10620" y="9720" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">f5</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="9945" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#53;</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="9630" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=5</text>
+<!-- Text -->
+<text xml:space="preserve" x="4365" y="9720" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">b5</text>
+<!-- Text -->
+<text xml:space="preserve" x="4860" y="9990" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#53;</text>
+<!-- Text -->
+<text xml:space="preserve" x="4860" y="9675" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-2</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="5715" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c8</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="5895" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#57;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="5580" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=5</text>
+<!-- Text -->
+<text xml:space="preserve" x="2745" y="9720" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">a5</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="9945" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#52;</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="9630" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-1</text>
+<!-- Text -->
+<text xml:space="preserve" x="9045" y="12870" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e3</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="13095" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#51;</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="12780" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=1</text>
+<!-- Text -->
+<text xml:space="preserve" x="9045" y="11295" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e4</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="11520" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#52;</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="11205" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=2</text>
+<!-- Text -->
+<text xml:space="preserve" x="9045" y="9720" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e5</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="9945" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#53;</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="9630" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=3</text>
+<!-- Text -->
+<text xml:space="preserve" x="9045" y="8550" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e6</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="8685" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#54;</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="8370" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=4</text>
+<!-- Text -->
+<text xml:space="preserve" x="10620" y="4365" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">f9</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="4545" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#56;</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="4230" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=6</text>
+<!-- Text -->
+<text xml:space="preserve" x="9045" y="7178" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e7</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="7313" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#55;</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="6998" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=7</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="17595" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c0</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="17820" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="17505" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-2</text>
+<!-- Text -->
+<text xml:space="preserve" x="4320" y="17595" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">b0</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="17820" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="17505" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-6</text>
+<!-- Text -->
+<text xml:space="preserve" x="2745" y="17595" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">a0</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="17820" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="17505" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-4</text>
+<!-- Text -->
+<text xml:space="preserve" x="2745" y="16020" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">a1</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="16245" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#50;</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="15930" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-3</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="16020" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c1</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="16245" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#50;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="15930" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-1</text>
+<!-- Text -->
+<text xml:space="preserve" x="10620" y="16020" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">f1</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="16245" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="15930" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=2</text>
+<!-- Text -->
+<text xml:space="preserve" x="4320" y="14445" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">b2</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="14670" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#51;</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="14355" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-4</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="14445" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c2</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="14670" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#51;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="14355" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=0</text>
+<!-- Text -->
+<text xml:space="preserve" x="2745" y="12870" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">a3</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="13095" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#51;</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="12780" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-2</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="12870" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c3</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="13095" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#52;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="12780" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=1</text>
+<!-- Text -->
+<text xml:space="preserve" x="7470" y="16020" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">d1</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="16245" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#50;</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="15930" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-3</text>
+<!-- Text -->
+<text xml:space="preserve" x="7470" y="14445" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">d2</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="14670" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#51;</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="14355" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-2</text>
+<!-- Text -->
+<text xml:space="preserve" x="9045" y="16020" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e1</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="16245" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#50;</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="15930" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-1</text>
+<!-- Text -->
+<text xml:space="preserve" x="9045" y="14445" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e2</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="14670" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#51;</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="14355" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=0</text>
+<!-- Text -->
+<text xml:space="preserve" x="7470" y="12870" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">d3</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="13095" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#52;</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="12780" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-2</text>
+<!-- Text -->
+<text xml:space="preserve" x="7470" y="11295" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">d4</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="11520" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#53;</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="11205" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-1</text>
+<!-- Text -->
+<text xml:space="preserve" x="7470" y="9720" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">d5</text>
+<!-- Text -->
+<text xml:space="preserve" x="8010" y="9945" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#54;</text>
+<!-- Text -->
+<text xml:space="preserve" x="8010" y="9630" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=0</text>
+<!-- Text -->
+<text xml:space="preserve" x="10620" y="12870" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">f3</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="13095" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#51;</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="12780" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=3</text>
+<!-- Text -->
+<text xml:space="preserve" x="10620" y="11295" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">f4</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="11520" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#52;</text>
+<!-- Text -->
+<text xml:space="preserve" x="11205" y="11205" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=4</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="8550" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c6</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="8730" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#55;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="8415" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=3</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="7200" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c7</text>
+<!-- Text -->
+<text xml:space="preserve" x="6435" y="7110" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#56;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6435" y="6795" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=4</text>
+<!-- Text -->
+<text xml:space="preserve" x="4320" y="7200" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">b7</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="7380" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#56;</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="7065" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=-1</text>
+<!-- Text -->
+<text xml:space="preserve" x="2745" y="4365" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">a9</text>
+<!-- Text -->
+<text xml:space="preserve" x="3375" y="4545" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;&#48;</text>
+<!-- Text -->
+<text xml:space="preserve" x="3375" y="4230" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=1</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="1170" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;&#51;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="855" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=5</text>
+<!-- Text -->
+<text xml:space="preserve" x="5835" y="970" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c12</text>
+<!-- Text -->
+<text xml:space="preserve" x="2745" y="5670" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">a8</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="5895" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#57;</text>
+<!-- Text -->
+<text xml:space="preserve" x="3330" y="5580" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=0</text>
+<!-- Text -->
+<text xml:space="preserve" x="4320" y="5670" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">a8</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="5895" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#57;</text>
+<!-- Text -->
+<text xml:space="preserve" x="4905" y="5580" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=0</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="3465" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">d10</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="3645" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;&#49;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="3330" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=6</text>
+<!-- Text -->
+<text xml:space="preserve" x="7470" y="4365" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">d9</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="4545" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;&#48;</text>
+<!-- Text -->
+<text xml:space="preserve" x="8055" y="4230" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=6</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="2520" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#49;&#50;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6480" y="2205" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=5</text>
+<!-- Text -->
+<text xml:space="preserve" x="5855" y="2340" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c11</text>
+<!-- Text -->
+<text xml:space="preserve" x="9045" y="4365" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e9</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="4545" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#56;</text>
+<!-- Text -->
+<text xml:space="preserve" x="9630" y="4230" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=8</text>
+<!-- Text -->
+<text xml:space="preserve" x="5895" y="9720" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">c5</text>
+<!-- Text -->
+<text xml:space="preserve" x="6435" y="9945" fill="#000000" font-family="Times,Symbol" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">&#937;&#61;&#53;</text>
+<!-- Text -->
+<text xml:space="preserve" x="6435" y="9630" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="216" text-anchor="start">A=2</text>
+<!-- Text -->
+<text xml:space="preserve" x="18450" y="7740" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="288" text-anchor="end">Event only seen by Node 1</text>
+<!-- Text -->
+<text xml:space="preserve" x="18720" y="7695" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">b2</text>
+<!-- Text -->
+<text xml:space="preserve" x="18720" y="8595" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e5</text>
+<!-- Text -->
+<text xml:space="preserve" x="18495" y="8640" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="288" text-anchor="end">Node 4 latest event</text>
+<!-- Text -->
+<text xml:space="preserve" x="18495" y="9585" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="288" text-anchor="end">Event only seen by Node 4</text>
+<!-- Text -->
+<text xml:space="preserve" x="18720" y="9495" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">f3</text>
+<!-- Text -->
+<text xml:space="preserve" x="18720" y="10395" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e2</text>
+<!-- Text -->
+<text xml:space="preserve" x="18495" y="10485" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="288" text-anchor="end">Event seen by both Node 1 and 4</text>
+<!-- Text -->
+<text xml:space="preserve" x="18720" y="4590" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e7</text>
+<!-- Text -->
+<text xml:space="preserve" x="18450" y="4590" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="288" text-anchor="end">Future events</text>
+<!-- Text -->
+<text xml:space="preserve" x="18765" y="6795" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">b5</text>
+<!-- Text -->
+<text xml:space="preserve" x="18450" y="6840" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="288" text-anchor="end">Node 1 latest event</text>
+<!-- Text -->
+<text xml:space="preserve" x="18720" y="5940" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="240" text-anchor="start">e6</text>
+<!-- Text -->
+<text xml:space="preserve" x="18450" y="5940" fill="#000000" font-family="Times" font-style="normal" font-weight="normal" font-size="288" text-anchor="end">Node 1 latest event</text>
+<!-- Text -->
+<g transform="translate(10800,19800) rotate(-90)" >
+<text xml:space="preserve" x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="216" text-anchor="start">Node-5</text>
+</g><!-- Text -->
+<g transform="translate(9225,19800) rotate(-90)" >
+<text xml:space="preserve" x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="216" text-anchor="start">Node-4</text>
+</g><!-- Text -->
+<g transform="translate(7650,19800) rotate(-90)" >
+<text xml:space="preserve" x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="216" text-anchor="start">Node-3</text>
+</g><!-- Text -->
+<g transform="translate(6075,19800) rotate(-90)" >
+<text xml:space="preserve" x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="216" text-anchor="start">Node-2</text>
+</g><!-- Text -->
+<g transform="translate(4500,19800) rotate(-90)" >
+<text xml:space="preserve" x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="216" text-anchor="start">Node-1</text>
+</g><!-- Text -->
+<g transform="translate(2925,19800) rotate(-90)" >
+<text xml:space="preserve" x="0" y="0" fill="#000000" font-family="Times" font-style="italic" font-weight="normal" font-size="216" text-anchor="start">Node-0</text>
+</g><!-- Text -->
+<g transform="translate(1350,14175) rotate(-90)" >
+<text xml:space="preserve" x="0" y="0" fill="#0000ff" font-family="Times" font-style="normal" font-weight="normal" font-size="360" text-anchor="start">time line</text>
+</g></g>
+</svg>

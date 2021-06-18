@@ -1,0 +1,98 @@
+\section{DEX Trading Example}\label{sec:dex_example}
+
+An example of the DEX matching and prices-discovery algorithm described in \cref{sec:dex} is shown in the following tables. The trading-order-queue in \cref{tab:trading_order_queue} and the two sorted sales list are generated and shown in \cref{tab:ask_sales_list} and \cref{tab:bid_sales_list}.
+
+\begin{table}[H]
+\begin{center}
+\input{dex/toq_table}
+\end{center}
+\caption{DEX Trading-order-queue} 
+\label{tab:trading_order_queue}
+\end{table}
+
+\pagebreak
+\begin{table}[H]
+\begin{center}
+\input{dex/ask_sales_table}
+\end{center}
+\caption{Sort list of ATO or the ask-sales list} 
+\label{tab:ask_sales_list}
+\end{table}
+
+%\pagebreak
+\begin{table}[H]
+\begin{center}
+\input{dex/bid_sales_table}
+\end{center}
+\caption{Sort list of BTO or the bid-sales list} 
+\label{tab:bid_sales_list}
+\end{table}
+
+\pagebreak
+\subsection{DEX After the Trading Match}
+The trade is executed from the first order in the queue which is the top of the \cref{tab:trading_order_queue} and the matching pairs shown in \cref{tab:matching_pairs}. A BTO order from the \cref{tab:trading_order_queue} is searched in \cref{tab:ask_sales_list} to see if $E_{bid,BTO} \geq E_{bid,ATO}$ and if the order is an ATO the \cref{tab:bid_sales_list} is searched and if $E_{ask,ATO} \geq E_{ask,BTO}$ a match is found. 
+The executed trading-orders are shown in \cref{tab:trading_order_queue_executed} and the orders which remain are shown in \cref{tab:trading_order_queue_rest}.
+The parameter \bfit{Id} shown in the tables, represents the execution order and matching \bfit{Id} of the trading pairs and \bfit{No} is the priority order in the trading-order-queue.
+
+\begin{table}[H]
+\begin{center}
+\input{dex/matching_pairs}
+\end{center}
+\caption{List of the matching pairs} 
+\label{tab:matching_pairs}
+\end{table}
+
+%\pagebreak
+\begin{table}[H]
+\begin{center}
+\input{dex/toq_table_executed}
+\end{center}
+\caption{Orders which are matched and executed} 
+\label{tab:trading_order_queue_executed}
+\end{table}
+
+\pagebreak
+\begin{table}[H]
+\begin{center}
+\input{dex/ask_sales_table_executed}
+\end{center}
+\caption{Sort list of ATO which are executed} 
+\label{tab:ask_sales_list_executed}
+\end{table}
+
+%\pagebreak
+\begin{table}[H]
+\begin{center}
+\input{dex/bid_sales_table_executed}
+\end{center}
+\caption{Sort list of BTO which are executed} 
+\label{tab:bid_sales_list_executed}
+\end{table}
+
+
+\pagebreak
+\begin{table}[H]
+\begin{center}
+\input{dex/toq_table_rest}
+\end{center}
+\caption{DEX Trading order queue of the orders which are not yet executed} 
+\label{tab:trading_order_queue_rest}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\input{dex/ask_sales_table_rest}
+\end{center}
+\caption{Sort list of ATO which are not yet executed} 
+\label{tab:ask_sales_list_rest}
+\end{table}
+
+%\pagebreak
+\begin{table}[H]
+\begin{center}
+\input{dex/bid_sales_table_rest}
+\end{center}
+\caption{Sort list of BTO which are not yet executed} 
+\label{tab:bid_sales_list_rest}
+\end{table}
+

@@ -1,0 +1,165 @@
+\section{HiBON Data format}
+\label{sec:hibon}
+All data exchanged and stored in the network is structured using a data format called \abbrev{HiBON}{Hash-invariant Binary Object Notation} which is inspired by \abbrev{BSON}{Binary JSON}, but the two formats are not compatible. In HiBON the keys are sorted according to the ordering rules described below (in D-lang). By ordering the keys, the data is hash invariant for the same collection.\\
+%The algorithm use to order the key is shown below (D-lang):
+
+\lstset{language=c++, numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, tabsize=4}%, 
+\begin{lstlisting}
+@safe
+bool less_than(string a, string b) pure
+     in {
+          assert(a.length > 0);
+          assert(b.length > 0);
+     }
+body {
+     static bool is_index(string a, out uint result) pure {
+          import std.conv : to;
+          enum MAX_UINT_SIZE=to!string(uint.max).length;
+          if ( a.length <= MAX_UINT_SIZE ) {
+               if ( a[0] == '0' ) {
+                    return false;
+               }
+               foreach(c; a[1..$]) {
+                    if ( (c < '0') || (c > '9') ) {
+                         return false;
+                    }
+               }
+               immutable number=a.to!ulong;
+               if ( number <= uint.max ) {
+                    result = cast(uint)number;
+                    return true;
+               }
+          }
+          return false;
+     }
+     uint a_index;
+     uint b_index;
+     if ( is_index(a, a_index) && is_index(b, b_index) ) {
+          return a_index < b_index;
+     }
+     return a < b;
+}
+\end{lstlisting}
+
+Only printable ASCII keys are allowed to be used as keys in the HiBON; this means no control characters or special characters allowed. The key is validated accordingly to the function described below.
+\begin{lstlisting}
+@safe bool is_key_valid(string a) pure nothrow {
+     enum : char {
+          SPACE = 0x20,
+          DEL = 0x7F,
+          DOUBLE_QUOTE = 34,
+          QUOTE = 39,
+          BACK_QUOTE = 0x60
+              }
+     if ( a.length > 0 ) {
+          foreach(c; a) {
+               // Chars between SPACE and DEL is valid
+               // except for " ' ` is not valid
+               if ( (c <= SPACE) || (c >= DEL) ||
+                   ( c == DOUBLE_QUOTE ) || ( c == QUOTE ) ||
+                   ( c == BACK_QUOTE ) ) {
+                    return false;
+               }
+          }
+          return true;
+     }
+     return false;
+}
+\end{lstlisting}
+
+
+\input{tab_hibon}
+
+Any data types which are not defined in \cref{tab:hibon} are illegal and must be rejected by the network. The types used in the table are primarily the types used in D except for a few as \texttt{\{\}} and \texttt{[]}.
+
+\subsection{HRPC – HiBON Remote Procedure Call}
+HRPC works like JSON-RPC just with signed binary data, the above-defined HiBON format. It means the data is hash-invariant enabling hash- and signature functions to be executed quickly and unambiguously.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+      \hline
+      Parameter & Description & Type & Access \\
+      \hline
+      $\$type$ & Set contract type to 'HRPC' &  \texttt{string} & \texttt{ro} \\
+      \hline
+      $\$pkey$ & Public key &  \texttt{bin} & \texttt{ro} \\
+      \hline
+      $\$sign$ & Signature of $\$msg$ &  \texttt{bin} & \texttt{ro} \\
+      \hline
+      $\$msg$ & Message object \cref{tab:HRPC_method_message}, \cref{tab:HRPC_success_message}, \cref{tab:HRPC_error_message} &  \texttt{\{\}} & \texttt{ro} \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{HRPC format} 
+\label{tab:HRPC_format}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+      \hline
+      Parameter & Description & Type & Access \\
+      \hline
+      $\$id$ & Message id  &  \texttt{uint} & \texttt{ro} \\
+      \hline
+      $\$method$ & Name of remote call function &  \texttt{string} & \texttt{ro} \\
+      \hline
+      $\$params$ & Params for the \$method function (optional) &  \texttt{\{\}} & \texttt{ro} \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{HRPC method message object} 
+\label{tab:HRPC_method_message}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+      \hline
+      Parameter & Description & Type & Access \\
+      \hline
+      $\$id$ & Message id &  \texttt{uint} & \texttt{ro} \\
+      \hline
+      $\$result$ & Result of the $\$method$ call &  \texttt{\{\}} & \texttt{ro} \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{HRPC success message object } 
+\label{tab:HRPC_success_message}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+      \hline
+      Parameter & Description & Type & Access \\
+      \hline
+      $\$id$ & Message id & \texttt{string} & \texttt{ro} \\
+      \hline
+      $\$msg$ & Error object \cref{tab:HRPC_error} & \texttt{\{\}} & \texttt{ro} \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{HPPC error response object } 
+\label{tab:HRPC_error_message}
+\end{table}
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+      \hline
+      Parameter & Description & Type & Access \\
+      \hline
+      $\$code$ & Set contract type to 'HRPC' & \texttt{uint} & \texttt{ro} \\
+      \hline
+      $\$msg$ & Error message  & \texttt{string} & \texttt{ro} \\
+      \hline
+      $\$data$ & Data object (optional) & \texttt{[]} & \texttt{ro} \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{HRPC error object } 
+\label{tab:HRPC_error}
+\end{table}

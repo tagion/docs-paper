@@ -1,0 +1,29 @@
+\subsection{Node contract}
+
+\abbrev{NNR}{Network Node Record} is used to store the node data of the record
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+      \hline
+      Parameter & Description & Type & Access \\
+      \hline
+      $\$type$ & Set contract type to 'NNR' &  \texttt{string} & \texttt{ro} \\
+      \hline
+      $\#node$ & Public key for the node &  \texttt{ubyte[]} & \texttt{ro} \\
+      \hline
+      $\$name$ & Hash value of the $NCR.\$name$ &  \texttt{\#} & \texttt{ro} \\
+      \hline
+      $\$time$ & Creation date &  \texttt{utc} & \texttt{ro} \\
+      \hline
+      $\$sign$ & Signature of $\$name$ by $NCR.\$pkey$ &  \texttt{ubyte[]} & \texttt{rc} \\
+      \hline
+      $\$state$ & The state of the (\bfit{PN}, \bfit{N}, \bfit{AN})  &  \texttt{uint} & \texttt{rc} \\
+      \hline
+      $\$gene$ & Node gene bit-string&  \texttt{ubyte[]} & \texttt{rc} \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{NNR Network Node Record} 
+\label{tab:node_record}
+\end{table}

@@ -1,0 +1,22 @@
+\section{Gene Distance}
+Each node has a gene string, which is used to calculate the gene-score of the node. This node-gene is represented as a binary string of bits.
+
+\begin{equation}
+ \gamma = [b_{0}, b_{1} .. b_{N-1}] ~ b_{i} \in \mathbb{B}
+\end{equation}
+
+The gene distance between two nodes A and B is calculated as the number of counted '1' of the \bfit{exclusive-or} between the two bits vectors.
+\begin{equation}
+ \Lambda(\gamma_A,\gamma_B) = \sum_{i=0}^{N-1}{(\gamma_{A,i}} \otimes {\gamma_{B,i})}
+\end{equation}
+
+The total gene score from a node A to all active nodes can be calculated as:
+\begin{equation}
+ \Lambda_{network} = \frac{1}{M} \cdot \sum_{j=0}^{M-1}{\Lambda(\gamma_j, \gamma_A)}
+\end{equation}
+Where $M$ is the number of active nodes in the network.
+
+The gene of the active node is mutated for each epoch via a UDR random number.
+A random bit select from the N bits is randomly set to '0' or '1'.
+
+Over time the gene-score between the active nodes is reduced, and this will statistically reduce the score compared to the inactive nodes, thereby increasing the probability of an inactive node to be swapped in as an active node.

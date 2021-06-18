@@ -1,0 +1,51 @@
+\section{Economic Contracts}
+The Tagion network is designed to handle multiple currencies by using the Tagion as the exchange currency.
+The other currencies in the network are represented by a bill type and are fully backed by a broker who guarantees the currency.
+Multi-Currency Smart Contract
+A broker is set up with a Multi-Currency Smart Contract (MCSC), which contains information about the currency type, account ID, and the broker’s public key. The total value of the broker's account is accounted for in the global value record. The MCSC contract is a special type of bill which will not be garbage collected automatically. 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{2cm}|p{7cm}|p{2cm}|}
+\hline
+Parameter & Description & Type \\
+\hline
+broker & Identity information object & mandatory \\
+\hline
+T & Currency type & mandatory \\
+\hline
+accointid & Account ID which labels a parameter in the global value record & mandatory \\
+\hline
+y & Public key & mandatory \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Broker multi-currency smart contract (MCSC)}
+\label{tab:MCSC}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{2cm}|p{7cm}|p{2cm}|}
+\hline
+Parameter & Description & Type \\
+\hline
+B & Bill pointer to the (MCSC) & mandatory \\
+\hline
+G & Guaranteed value & mandatory \\
+\hline
+V & Value in circulation & mandatory \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Broker value record which is stored in the global value record}
+\label{tab:broker_value_record}
+\end{table}
+
+\paragraph{Exchange contract\\}
+All the currencies which are represented on the network can be exchanged to Tagion via an Exchange Smart Contract (XSC). \\
+To execute an XSC, a normal transaction is performed with some additional parameters. The only significant difference from a transaction contract is that an XSC is a type of contract executed in the exchange matching pool. That means that asks and bids are matched according to the epoch ordered list. \\
+If an XSC is not yet executed, the contract can be called back. If called back, the contract is erased from the exchange matching pool via an EXSC contract (Erase exchange Smart Contract) – or the contract can self-destroy by setting a lifetime for the contract. \\
+\paragraph{Off-ramp contract\\}
+An off-ramp contract, OXSC (Off-ramp eXchange Smart Contract), is performed when the owner of a bill asks their broker to pay out to an external account. \\
+All the OXSC’s are collected in an off-ramp exchange pool. The broker needs to sign the output from this contract, and the off-ramp bill is burned.

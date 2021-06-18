@@ -1,0 +1,139 @@
+\section{Transaction Scripts}
+When the network receives a transaction request, it is added in an epoch and executed by the scripting engine. A transaction request includes a transaction object which is a data package in HiBON format. The HiBON object contains input bill numbers and the transaction script including a list of digital signatures which signs the transaction script object. The signatures can be verified via the public keys represented in the input bills.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+%
+\hline
+Parameter & Description & Type & Access \\
+\hline
+$\$type$ & Set contract type to 'B0' &  \texttt{string} & \texttt{ro} \\
+\hline
+$\$V$ & Value & \texttt{ulong} & \texttt{ro} \\
+\hline
+$\$k$ & Epoch number & \texttt{uint} & \texttt{ro} \\
+\hline
+$\$T$ & Bill type & \texttt{string} & \texttt{ro} \\
+\hline
+$\$Y$ & Doubled hashed Owner key & \texttt{ubyte[]} & \texttt{ro} \\
+\hline
+{...} & {...} & {...}  & {...} \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Standard archived Bill object}
+\label{tab:standard_bill}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+%
+\hline
+Parameter & Description & Type & Access \\
+\hline
+$\$in$ & Array of Bill numbers and public keys & \texttt{[]} & \texttt{ro} \\
+\hline
+$\$read$ & Array of Bill numbers and public keys & \texttt{[]} & \texttt{ro} \\
+\hline
+$\$out$ & Array of public key hashes & \texttt{[]} & \texttt{ro} \\
+\hline
+$\$params$ & Parameters used by the script & \texttt{\{\}} & \texttt{ro} \\
+\hline
+$\$script$ & Transaction script & \texttt{\{\}} & \texttt{ro} \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Transaction scripting object}
+\label{tab:transaction_scripting_object}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+%
+\hline
+Parameter & Description & Type & Access \\
+\hline
+$\$record$ & Scripting object & \texttt{\{\}} & \texttt{ro} \\
+\hline
+$\$signs$ & Array of input signatures & \texttt{[]} & \texttt{ro} \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Transaction object}
+\label{tab:transaction_object}
+\end{table}
+
+\paragraph{Transaction Epoch consensus rules:}
+\begin{enumerate}
+ \item 
+ If one or more script objects is found with the same input bill number, the first transaction object in the epoch is kept in the epoch list. Any other object flows in the list are removed.
+\end{enumerate}
+
+
+\paragraph{Transaction object initial consensus rules:}
+\begin{enumerate}
+ \item 
+    The size of the inputs array in the script record must be one or more.
+ \item 
+    The size of the inputs array and the signature arrays must be the same size.
+ \item 
+    The bill type of the first type input must be a Tagion type.
+ \item 
+    Duplicate bill numbers are not allowed.
+ \item 
+    All the inputs must be in the current state of the DART.
+\end{enumerate}
+If a transaction object violates one of the initial consensus rules, it is handled by a violation script function.
+
+\paragraph{Transaction scripting execution:}
+Because the epoch list is guaranteed to prevent inputs with same bill number, a node can choose to execute the scripts in the epoch in parallel.
+
+\paragraph{First execution procedure and rules:}
+\begin{enumerate}
+ \item 
+    The bills within the node's DART angle are read from the DART. 
+ \item 
+    The read bills are gossiped to the network.
+ \item 
+    If the script object has only one input, the script is immediately executed.
+ \item 
+    If all the bills in the inputs are covered in the local DART, the script is executed immediately.
+\end{enumerate}
+
+\paragraph{Second execution procedure and rules:}
+\begin{enumerate}
+\item 
+    The script is executed if all the inputs are received or read for a transaction object and the signatures are correct.
+\item
+    The script must finish with a burn function which burns the transaction fee.
+\item 
+    If the sum of all outputs of the bill type Tagions (bill type can be Tagions or external contracts of, e.g. Euros) is greater than the sum of the input minus the transaction fee, the first input bill is scheduled to be removed, and the transaction is ignored.
+\item 
+    If the sum of all outputs of types other than Tagion is greater than the input, the first input bill is scheduled to be removed, and the transaction is ignored.
+\end{enumerate}
+
+\paragraph{DART execution procedure:}
+\begin{enumerate}
+ \item 
+    When all scripts have been executed, the process of updating the DART begins.
+ \item 
+    All inputs of successfully executed scripts must be removed from sections covered by the node.
+ \item 
+    All outputs of the successfully executed script must be added to the sections covered by the node.
+ \item 
+    All the Merkle roots within the section angle must be calculated and signed and gossiped to the network.
+Note: From this point, the node can start executing the next epoch.
+ \item 
+    When the node has received the majority for all the sections' Merkle, it calculates the Bull's eye of the DART, which is signed and gossiped to the network.
+ \item 
+    When the majority of consistent Bull's eyes has been received, the node decides that the DART has been updated and changes states. 
+Note: A transaction has been completed at the new state.
+ \item 
+    If one of the above rules fails, the DART is reverted to the previous state.
+\end{enumerate}
+
+Note: When a node receives a transaction object, it can send a request to the DART to collect the inputs of the script. By doing the execution in parallel, it improves the transaction time instead of starting to collect inputs when the epoch has been completed.
+

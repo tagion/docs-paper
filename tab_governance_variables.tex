@@ -1,0 +1,25 @@
+\begin{table}[H]
+ \begin{center}
+  \begin{tabular}{|p{4cm}|p{8cm}|}
+  \hline
+  Variable name & Definition and scoring rule \\
+  \hline
+  Birthdate & The date a prospect node becomes a node. \\
+  \hline
+  Gene & A gene is unique for each node. \\
+  \hline
+  Gene score (Gene-diversification points) & Each time a node mates with another node, a score is calculated for them both based on how diverse their genes are compared to each other. They mate each time verification of a prospect node takes place, when an active node makes an epoch, see \cref{sec:hashgraph_cm}, and when two nodes choose to mate and validate each other. \\
+  \hline
+  Node age & A measure of a node's total available time for the network. Time as both a node and an active node. It increases both as a node and active node when available for the network. \\
+  \hline
+  Active time & Time as an active node. It increases when a node is active.\\
+  \hline
+  Prospect score & The Prospect score variable is a measure of how much the prospect node has been available to the network. It increases when the prospect node is available and decreases when not. \\
+  \hline
+  Contribution loyalty & A measure of how much the node has been active and stayed available. Non-availability of a node decreases contribution loyalty; being an active node increases loyalty. \\
+  \hline
+  \end{tabular}
+ \end{center}
+ \caption{Variables and scoring rules for the reputational scoring model}
+ \label{tab:governance_variables}
+\end{table}

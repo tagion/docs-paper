@@ -1,0 +1,187 @@
+\documentclass[a4paper,10pt]{article}
+
+
+% Set margin
+\usepackage[a4paper]
+%,bindingoffset=0.2in,%
+%            left=1in,right=1in,top=1in,bottom=1in,%
+%            footskip=.25in]
+{geometry}
+% Packages include
+\usepackage[utf8]{inputenc}
+%% \usepackage[table]{xcolor}
+\usepackage[table, svgnames]{xcolor}
+\usepackage{cellspace}
+\usepackage{etoolbox}
+\usepackage{booktabs}
+\usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{lastpage}
+
+%\usepackage[backend=biber,...]{biblatex}
+%\usepackage[style=authoryear]{biblatex}
+\usepackage[backend=biber,style=numeric]{biblatex}
+%\bibliographystyle{ieeetr}
+\addbibresource{bibtex.bib}
+
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=blue,
+    urlcolor=black
+}
+\usepackage{cleveref}
+
+% Souce code fonts
+\usepackage{listings}
+\lstset{language=c++, numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, tabsize=4}%, basicstyle=\ttfamily}
+
+%\usepackage{enumitem}
+%\usepackage{natbib}
+\usepackage{nomencl}
+\makenomenclature
+\renewcommand{\nomname}{List of Abbreviations}
+
+% Global definitions
+% Abbreviation macro
+\newcommand{\abbrev}[2]{#2 \bfit{(#1)}\nomenclature{#1}{#2}}
+% Comment macro
+
+
+%\usepackage[draft]{todonotes}   % notes showed
+\newcommand{\todo}[2]{\textcolor{red}{\textit{\textbf{(#1)}}}\textcolor{green}{\textit{\textbf{(#2)}}}}
+\newcommand{\note}[1]{\textcolor{red}{\textit{\textbf{(#1)}}}}
+
+% Font types
+% Bold-italic
+\newcommand{\bfit}[1]{\textbf{\textit{#1}}}
+
+%
+% Table setup
+%
+\colorlet{headercolour}{LightGray}
+% \colorlet{textcolour}{yellow}
+\AtBeginEnvironment{tabular}{\rowcolors{1}{\ifnumequal{\rownum}{1}{headercolour}{white}}{}}%
+%\newcolumntype{L}{>{\ifnumequal{\rownum}{1}{\sffamily\bfseries\color{textcolour}}}Sl}
+%\newcolumntype{C}{>{\ifnumequal{\rownum}{1}{\sffamily\bfseries\color{textcolour}}}Sc}
+%\newcolumntype{R}{>{\ifnumequal{\rownum}{1}{\sffamily\bfseries\color{textcolour}}}Sr}
+\setlength{\cellspacetoplimit}{5pt}
+\setlength{\cellspacebottomlimit}{1pt}
+
+%opening
+\input{gitversion}
+\title{Tagion Technical Paper}
+
+\author{B. Rasmussen, Carsten and Simonsen, Theis}
+
+\begin{document}
+
+%\renewcommand\p@table{Table.\@ }
+\begin{titlepage}
+\maketitle
+\begin{center}
+\includegraphics[width = 40mm]{fig/logomark-black.eps}
+\end{center}
+\thispagestyle{empty}
+\input{abstract}
+\centering
+\gitversion
+\end{titlepage}
+
+
+\pagebreak
+\pagenumbering{alph}
+\tableofcontents
+
+\pagebreak
+\pagenumbering{arabic}
+\input{governance}
+
+\pagebreak
+\input{hashgraph}
+
+\pagebreak
+\input{dart}
+
+\pagebreak
+\input{special_records}
+
+\pagebreak
+\input{scripting_engine}
+
+\pagebreak
+\input{transaction}
+
+
+\pagebreak
+\input{business_model}
+
+% The broker contarct is removed for now
+%\pagebreak
+%\input{economic_contracts}
+
+\pagebreak
+\input{parallelism}
+
+\pagebreak
+\input{node_stack}
+
+\pagebreak
+\input{privacy}
+
+%\pagebreak
+
+%\input{sub_network}
+
+\pagebreak
+\input{external_exchange}
+
+%
+% Appedix starts here
+%
+\appendix
+
+\pagebreak
+\pagenumbering{roman}
+\input{hibon}
+
+\pagebreak
+\input{crypto_bill}
+
+\pagebreak
+\input{network}
+
+\pagebreak
+\input{network_security}
+
+\pagebreak
+\input{dex_example}
+
+\pagebreak
+\input{gene_distance}
+\pagebreak
+\input{mutation_rules}
+
+%%% Content lists
+\pagebreak
+\listoftables
+
+\pagebreak
+\listoffigures
+
+\pagebreak
+\printnomenclature
+
+\pagebreak
+%\bibliographystyle{apacite}
+%\bibliography{bibtex}
+\printbibliography
+
+\end{document}

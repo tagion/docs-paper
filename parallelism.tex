@@ -1,0 +1,6 @@
+\section{Parallelism}
+Transactions with independent bills can run in parallel, enabling scalability and performance. Independent bills mean that inputs and outputs of transactions are not the same bills. It can run in parallel because the overall design of the data, DART and the scripting engine makes it possible. \\
+The scripting engine is an event-driven engine that executes functions in parallel with inputs and produces outputs locally on each node. Inputs which must be used are read from the DART, and the outputs are stored in the DART. When the transaction successfully completes, the inputs are deleted.
+
+The database is distributed, thus nodes only maintain and keep a copy of the part of the database they are subscribed to, see \cref{sec:DART}. Because transactions' inputs and outputs are independent and each node only executes a part of the transactions, they can be executed in parallel and the database updated in parallel as well. \\
+It is not the transaction instructions, which are stored in the database, but the actual bills, which are used as inputs and outputs. Then all nodes do not need to execute all data to verify the integrity of the database as in typical blockchain structures. The consensus event and consensus data are thus merely an intermediate calculation, where the output is stored. 

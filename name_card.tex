@@ -1,0 +1,65 @@
+\subsection{Name card contract} \label{sec:name_card_contract}
+A \abbrev{NNC}{Network Name Card} is a record which are composed of two archives \abbrev{NCL}{Name Card Label} and \abbrev{NCR}{Name Card Record} both of the archives are stored in the DART.
+
+The NCL label card sets the NNC name and NCR record stores the data related to the name-card (see \cref{tab:ncr}). The two archives are always updated in pairs in the network.
+
+The hash-pointer of an NCL is calculated for the name-parameter and not for the archives in itself. The NCL can and must only contain the parameter as shown in the  \cref{tab:ncl}.
+
+When an NNC is updated the NCR is updated, the $\$previous$ hash-pointer is set to the previous NCR and the $\$index$ is increased by one. The $\$record$ parameter in NCL is set to the hash-pointer of NCR and $\$sign$ is set to the signature of $\$record$.
+
+The $\$index$ of the first NCR is set to $0$, and the $\$previous$ parameter is to hash value of $\$pubkey$ of the NCL archive.
+
+The $\$lang$ sets the type of restricted letters and symbols which is allowed to be used in the NNC name.
+
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+      \hline
+      Parameter & Description & Type & Access \\
+      \hline
+      $\$type$ & Set contract type to 'NCL' & \texttt{string} & \texttt{ro} \\
+      \hline
+      $\#name$ & Name of the name-card & \texttt{string} & \texttt{ro} \\
+      \hline
+      $\$lang$ & Language letter code & \texttt{string} & \texttt{ro} \\
+      \hline
+      $\$time$ & Creation date & \texttt{utc} & \texttt{ro} \\
+      \hline
+      $\$pkey$ & Public key & \texttt{ubyte[]} & \texttt{ro} \\
+      \hline
+      $\$sign$ & Signature of the $\$record$ & \texttt{ubyte[]} & \texttt{rc} \\
+      \hline
+      $\$record$ & Hash pointer to the NCR archive & \texttt{ubyte[]} & \texttt{rc} \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{NCL Network Name Card} 
+\label{tab:ncl}
+\end{table}
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+      \hline
+      Parameter & Description & Type & Access \\
+      \hline
+      $\$type$ & Sets the contract type to 'NCR' &  \texttt{string} & \texttt{ro} \\
+      \hline
+      $\$name$ & Hash value of the $NCR.\$name$ & \texttt{ubyte[]} & \texttt{ro} \\
+      \hline
+      $\$previous$ & Hash pointer to the previous NCR & \texttt{ubyte[]} & \texttt{rc} \\
+      \hline
+      $\$index$ & Index number & \texttt{uint} & \texttt{rc} \\
+      \hline
+      $\$node$ & Optional node record & \texttt{\#} & \texttt{rc} \\
+      \hline
+      ... & ... &  ... &  ... \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{NCR Network Name Record} 
+\label{tab:ncr}
+\end{table}
+
+

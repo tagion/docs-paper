@@ -1,0 +1,17 @@
+\section{Special Records}
+
+The archives are stored in the DART using the hash-fingerprint as an index-pointer like in \abbrev{DHT}{Distribute Hash Tabel} (See \cref{sec:DART}). The hash of an archive is calculated in two ways as follows. If the archive does not contain $\#'param'$ the hash is calculated from the binary data of the HiBON archive and if the $\#'param'$ exists this type of archive is call \abbrev{PIA}{Parameter Indexed Archive}. For a PIA the hash-pointer is calculated for the content of the $\#'param'$.
+
+The parameter starting with a dollar sign is reserved for use as system parameters (like $\$'param'$) and should only be used for as such, or else the system will reject it as an error.
+In particular, $\$type$ is used to set the type of an HiBON object.
+An PIA-archive must contain a $\$type$ parameter.
+
+Some of the parameters in this special archive has restricted access.
+The access \texttt{ro} means that this parameter is set on the creation of the archive and can not be changed. The \texttt{rc} access means that this parameter is controlled and updated by the network and can only be read. 
+
+
+\input{name_card}
+
+\input{node_contract}
+
+\input{sub_network_contract}

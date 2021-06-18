@@ -1,0 +1,35 @@
+\subsection{Consensus Ordering}
+In the Tagion implementation of the Hashgraph algorithm, an Event is only allowed to point to one or none ``other parent'' which is called a ``father-event'' as shown om \cref{fig:consensus_order}. This strategy aids in solving the graph forking problem and simplifies the consensus ordering.\\
+The ``self-parent'' is defined as a ``mother-event'' in the Tagion implementation. An event must have a mother-event but doesn't have to have a father-event.
+
+Each event points to the previous event called the mother-event, and some also point to another father-event. The mother-event is defined as the previous event from the same node. The father is an event sent via the gossip network from another node. \\
+
+The order $\Omega$ is calculated as:
+
+%\end{equation}
+\begin{equation}
+ \Omega_{B,k+1} = max \big(\Omega_{A,k} , \Omega_{B,k} \big) +1
+\end{equation}
+
+The events in the epoch list are sorted by the order $\Omega$. If the order of two events is equal, the hash $h$ of the event is used to calculate the order.
+The following expression is used to order the events:
+
+\begin{equation}
+ {l}_{A,B} = 
+    \begin{cases}
+        {{\Omega}_{A} < {\Omega}_{B}} & 
+        \text{if}  ~ ({\Omega}_{A} \neq {\Omega}_{B} )  \\ 
+        H (    {h}_{A} \parallel {h}_{B} )  < H (    {h}_{B} \parallel {h}_{A} ) & 
+        \text{otherwise}
+    \end{cases}
+\end{equation}
+
+The parameter ${l}_{A,B}$ is $'true'$ if event A is ordered before event B.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.5\textwidth]{fig/consensus_order.eps}
+ % consensus_order.eps: 1550x1908 px, 300dpi, 13.12x16.15 cm, bb=0 0 372 458
+ \caption{Events and relations}
+ \label{fig:consensus_order}
+\end{figure}

@@ -1,0 +1,62 @@
+\section{Mutation rules}
+
+In this sections the algorithm of bill gene mutations is described.
+
+\subsection{Mutation base}
+A mutation base vector $R$ is generated as an UDR bit-vector
+\begin{equation}
+ R = [\mu_{0}, \mu_{1} .. \mu_{N-1}] ~ \mu_{i} \in \mathbb{B}
+\end{equation}
+
+\subsection{Population gene mutation}
+From a number $M$ of gene vectors $T_j$ a population mutation gene $B$ is defined.
+\begin{equation}
+ B = [\beta_{0}, \beta_{1} .. \beta_{N-1}] ~ \beta_{i} \in \mathbb{B}
+\end{equation}
+
+For all 1's for each vector is summed, as follows.
+\begin{equation}
+ s_{i} = \sum_{j=0}^{M-1}  t_{j,i}, ~ t_{j,i} \in \mathbb{B}
+\end{equation}
+Where $s_i$ is the sums of 1's for bit $i$ for all vectors $T_j$ and $t_{j,i}$ is the bits in the $T_j$ vectors.
+
+The bits in the population gene is defined as follows.
+\begin{equation}
+ \beta_{i} = 
+  \begin{cases}
+  1 & \text{if} ~ ( 2 \cdot s_i > M) \\
+  \mu_i & \text{if} ~ ( 2 \cdot s_i = M) \\
+  0 & \text{otherwise}     
+ \end{cases}
+\end{equation}
+Where $mu_i$ is the mutation base for the population $M$.
+
+\subsection{Production gene mutation}
+From a gene pair $a$ and $b$ the production gene is defined as:
+\begin{equation}
+ \gamma_{i} = 
+  \begin{cases}
+  a_i & \text{if} ~ ( \mu_i = 0) \\
+  b_i & \text{otherwise}     
+ \end{cases}
+\end{equation}
+And $\mu_i$ is the mutation base of the production mutation.
+
+\subsection{Transaction mutation}
+The bill mutation rules is as follows.
+
+\begin{enumerate}[{B}.1]
+ \item A population gene $B$ is calculated for all inputs
+ \item The genes of the outputs is production mutated with the epoch gene
+\end{enumerate}
+
+The epoch gene is generated for all the outputs as follows:
+\begin{enumerate}[{P}.1]
+ \item A population gene $P$ is calculated for all the transaction output genes
+ \item The previous epoch gene $E$ is produced with $P$ to generate a new $E$ gene
+\end{enumerate}
+
+The transaction rewards lottery is selected based on the gene distance between the output gene and the current epoch gene.
+
+
+

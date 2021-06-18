@@ -1,0 +1,28 @@
+\section{Network}
+The following steps are executed in the network for a standard transaction:
+\begin{enumerate}
+ \item 
+     The transaction object is sent to one of the active nodes (an inactive node should relay the transaction object to an active node).
+ \item 
+    When a node receives a transaction object, its format and the signatures of all the inputs are checked.
+ \item 
+    If the transaction object is valid, it is added to the payload of an event.
+ \item 
+    The event is gossiped to the network.
+ \item 
+    The payload is put into an epoch list in order.
+ \item 
+    The epoch list is processed in the epoch order.
+ \item 
+    All inputs to the transaction are collected from the DART database.
+ \item 
+    The transaction script is executed when all inputs are read from the DART.
+ \item 
+    The output of the transaction scripts is gossiped to the network.
+ \item 
+    When the network reaches consensus on all outputs of the transactions, the DART is updated. 
+ \item 
+    The new Merkle root (Bull’s eye) of the DART is calculated, and the Bull’s eye is gossiped to the network. 
+ \item 
+    When the majority of the nodes reach consensus on the Bull’s eye, it is added to the DART blockchain. The transaction is now approved.
+\end{enumerate}

@@ -1,0 +1,23 @@
+\subsection{Sub-Network contract}
+
+Via a special contract executed on the \abbrev{TMN}{Tagion Main Network} a \abbrev{TSN}{Tagion Sub Network} can be launched. This sub-network will create a new sub-DART which only can be updated from the nodes running the TSN.\\
+A group of nodes can initiate the sub-network by signing this contract and stake an amount in TGS.\\
+The rules for the TSN are set when the network is launched, and the rules can differ from the rules in TMN.
+The TSN can be assigned to a group of nodes or fully open for all nodes. When a TSN is launched an \abbrev{TSNF}{Tagion Sub Network Funds} is created on the main network to hold the funds for the fees in the main network. The funds are used to pay rewards to the nodes running the TSN and to pay fees to the main.
+When an epoch is created in the bull's eye for TSN, a contract is automatically sent to the MTN, and a fee is deducted from the TSNF account and burned.
+If there are not enough funds in the TSNF account, TMN rejects the contract.
+
+TGS used in the TSN must be locked in a \abbrev{TSNA}{Tagion Sub Network Account} these funds can only be transferred between other TSNA and to the TSNF. Funds can not be transferred from TSNF to a TSNA.
+
+The funds in TSNA can be transferred to TGS-bills again via TSNA-contract this contract can take multiple TSNA as input and will transfer all the funds to bills on the output, all the input TSNA will be deleted from DART as is the case with TGS-bills.
+
+\paragraph{Basic rules for a Sub-Network}
+\begin{enumerate}[\S 1]
+ %\item TGS is accounted in TMN
+ \item TSN can have a different rule set then applies for TMN
+ \item No nodes can transfer money out of a TSNF account
+ \item An TSNF account is used to pay rewards to the TSN nodes and the burning fees to the TMN
+ \item An TSNA account funds can be transferred to a TSNF account
+ \item An TSNA account can transfer money to other TSNA accounts. The fees burned are a little higher than fees for bills.
+ \item The rewards in the TSN are paid from the TSNF account because a TSN can not print TGS as rewards as is the case for TSN.
+\end{enumerate}

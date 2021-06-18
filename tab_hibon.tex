@@ -1,0 +1,72 @@
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|p{3.5cm}|l|p{1.5cm}|p{8cm}|}
+ %     \rowcolor{table_header_color}
+      \hline
+      Data type & Code & D-Type & Description \\
+      \hline
+      float64 & 0x01 & \texttt{double} & 64bit floating point \\
+      \hline
+      string & 0x02 & \texttt{string} & UTF-8 string \\
+      \hline
+      Embedded document & 0x03 & \texttt{\{\}} & HiBON object \\
+      \hline
+      Embedded array & 0x04 & \texttt{[]} & HiBON Array object (Only index numbers allowed) \\
+      \hline
+%      Binary data & 0x05 & -- & Binary in as sub-type \\
+%      \hline
+      Boolean & 0x08 & \texttt{bool} & Boolean false=0, true=1 \\
+      \hline
+      64bits UTC Time & 0x09 & \texttt{utc} & UTC datetime 64bits signed integer \\
+      \hline
+      int32 number & 0x10 & \texttt{int} & 32bit usigned number \\
+      \hline
+      int64 number & 0x12 & \texttt{long} & 64bits signed integer \\
+      \hline
+      float128 & 0x13 & \texttt{decimal} & 128bits floating point \\
+      \hline
+      Big integer & 0x18 & \texttt{bigint} & Signed big integer \\
+      \hline
+      uint32 & 0x20 & \texttt{uint} & 32bit unsigned number \\
+      \hline
+      float32 & 0x21 & \texttt{float} & 32bit floating point \\
+      \hline
+      uint64 & 0x22 & \texttt{ulong} & 64bit unsigned number \\
+      \hline
+      Big integer & 0x28 & \texttt{ubigint} & Unsigned big integer \\
+      \hline
+      Native Document  & 0x43 & \texttt{Document} & Reserved for internal use only \\
+      \hline
+      Defines Array    & 0x80 & \texttt{void} & Reserved type for internal use only \\
+      \hline
+      Array of float64 & 0x81 & \texttt{double[]} & Array of unsigned 64bits integer (size is multiple of 8bytes) \\
+      \hline
+      Binary string    & 0x85 & \texttt{ubyte[]} & Array of bytes (size is multiple of 1bytes)\\
+      \hline
+      Array of int32   & 0x90 & \texttt{int[]} & Array of 32bits signed integers (size is multiple of 4bytes) \\
+      \hline
+      Array of int64   & 0x92 & \texttt{long[]} &  Array of 64bits signed integer (size is multiple of 8bytes) \\
+      \hline
+      Array of int32 & 0x90 & \texttt{int[]} & Array of 32bits integer (size is multiple of 4bytes) \\
+      \hline
+      Array of uint64 & 0x92 & \texttt{long[]} & Array of 64bits integer (size is multiple of 8bytes) \\
+      \hline
+      Array of float128 & 0x93 & \texttt{decimal[]}  & Array of 128bits floating point (size is multiple of 16bytes) \\
+      \hline
+      Array of uint32 & 0xA0 & \texttt{uint[]} & Array of unsigned 32bits integer (size is multiple of 4bytes) \\
+      \hline
+      Array of float32 & 0xA1 & \texttt{float[]}  & Array of 32bits floating point (size is multiple of 4bytes) \\
+      \hline
+      Array of int64 & 0xA2 & \texttt{ulong[]} & Array of unsigned 64bits integer (size is multiple of 8bytes) \\
+      \hline
+      Defines string arrays    & 0x83 & \texttt{string[]} & Reserved type for internal use only \\
+      \hline
+      Defines Document arrays  & 0xC3 & \texttt{Document[]} & Reserved type for internal use only \\
+      \hline
+      Defines HiBON arrays     & 0x82 & \texttt{HiBON[]} & Reserved type for internal use only \\
+      \hline
+  \end{tabular}
+\end{center}
+\caption{HiBON Basic data-types}
+\label{tab:hibon}
+\end{table}

@@ -1,0 +1,8 @@
+{
+  "name": "tagion-dex",
+  "email": "cr@tagion.org",
+  "url": "http://tagion.org/",
+  "dependencies": {
+    "ejs": "^2.7.1"
+  }
+}

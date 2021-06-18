@@ -1,0 +1,43 @@
+\subsection{Economic Governance} \label{subsec:economic_governance}
+The economic model of Tagion tries to stabilise the intrinsic value of the system, rather than being pegged to external currencies or assets. 
+There are two main phases of economic governance, where the first is a linear and stable supply. The second phase builds on a model that aims to keep the intrinsic value of the currency stable by controlling the supply of money. 
+
+The idea is that money reflects the underlying value of an asset; money in itself does not have value. Production in our society creates the value: the assets, which values are represented by money, make them easy to trade. Being able to represent a value for the persons using the money includes the need to trust that they can use the money elsewhere, and it needs to have a stable value over time. 
+The reason a currency is trusted is that it has adoption and a stable value over time, and not because money is backed by gold or is state-backed. Adoption of the Tagion network happens over time, but the stability of the Tagion currency needs to be addressed, making it trusted. 
+
+
+\subsubsection{Stable supply}
+Creating a stable supply with full transparency like in Bitcoin (though decreasing supply, stable) creates trust in the system. No actor can create a significant supply and dilute the value and the trust in the system. 
+Some systems have a built-in cap in the system, which needs to be changed programmatically, like Bitcoin. Tagion does not have a built-in cap, because the supply of money should somehow correspond to the adoption, and thus the representation of values in the system. Otherwise, destructive deflation in the system could cause the real use of the system to fall, because people would then tend to hold and speculate with the money instead of using it. Of course, inflation can also be destructive, but a steady and insignificant increase in the supply of money should not create hyperinflation in the system. The most important thing would be that people keep using Tagions because they trust the money and do not hold on to them due to deflation.
+During the first couple of years in a monetary system's lifetime, high volatility is expected because of the low numbers of actors, which can easily both make the internal and external value go up and down because each actor's transaction can be significant in the system. As adoption occurs and the number of actors in the system becomes significant compared to a single actor, then price volatility decreases, because no single actor has a significant effect on the system. When this adoption size is reached, it leads us to the next phase, where an algorithm controlling the money supply stabilises the intrinsic value. 
+
+\subsubsection{Stable intrinsic value}
+Milton Friedman stated that ``Inflation is always and everywhere a monetary phenomenon''. This means that inflation has nothing to do with the production in society \cite{friedman_counter}. The relationship between money and the production in society can be expressed by the equation of exchange: \cite{britannica_monetarism}
+
+\begin{equation}
+ M \cdot V = P \cdot Q
+ \label{eq:equation_of_exchange}
+\end{equation}
+
+\begin{itemize}
+ \item[$M$]is the quantity of money. 
+ \item[$V$]is the velocity of money (the number of times per year the average currency in the money supply is spent).
+ \item[$P$]is the average price level of sold goods and services.
+ \item[$Q$](or Y) is the real GDP for an economy.
+\end{itemize}
+
+This equation has some useful constructs of the measure of money within a monetary system, but also an external measure of GDP, which is not available for Tagion because Tagion only measures on internal variables. Tagion sees an economic system as a flow system and not as static equilibrium. The constructs in the model are used but translated into a dynamic flow model with only internal variables. A translation of the constructs to variables in the Tagion system could be: 
+
+\begin{itemize}
+ \item[$M$]is the quantity of Tagions in the system. That is a variable directly measurable in the system.  
+ \item[$V$]is the number of times per year the average Tagion in the money supply is spent. It can be mapped to the variable of the number of transactions and average supply of money per year, which are direct variables in the system. 
+ \item[$Q$]can be mapped with an average number of nodes in the system, which is an expression for users, and adoption in the system, thus how much of users' value the system represents. More variables, such as the acceleration of transactions, average transactions per time unit, average transaction size and acceleration can all be potential variables for the constructs in the system.
+ \item[$P$]is the average price level in the Tagion monetary system, which can be expressed as: 
+ \begin{equation}
+  P = \frac{M \cdot V}{Q}
+ \end{equation}
+ The aim would be to keep the price level $P$ stable, where the only controlled variable is the supply of money, which can be regulated after a model by an algorithm. 
+\end{itemize}
+
+These variables need to be modelled, and construct-validation, correlation and causal-relation tests made. It requires a system of a particular size and much testing to model this. Tagion is confident that it is possible to keep intrinsic stability by such a model in the system. 
+The aim is not an xx \% inflation target of the system, which makes no sense when external constructs as GDP are not measured, but to keep the intrinsic value in the system stable. It is accomplished by creating the adoption of the system and an intrinsic stability mechanism in the system. It should generate long-term trust and stability over time, becoming a store of value. External parties must not control the money supply and system with their interest which dilutes the trust and value of the money. 
