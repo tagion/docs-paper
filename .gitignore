@@ -21,3 +21,10 @@
 *.kate-swp
 gitversion.txt
 gitversion.tex
+
+# Node.js DEX
+dex/node_modules
+dex/package-lock.json
+
+# texstudio
+tagion_tech_paper.run.xml

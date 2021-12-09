@@ -93,35 +93,34 @@ If we have an epoch time of $10$ seconds and the probability is $10^{-53}$ then 
 Note.
 For a very large number of $M$ and $N$ the probability can be expressed as a logarithm formula to prevent numerical overflow.
 Combination expressed as a logarithm formula:
-\begin{equation}
+%\begin{equation}
 \begin{align*}
  \Phi (n,r) &= \sum_{k=r+1}^{n}{ln(k)} - \sum_{k=1}^{r}{ln(k)} \\
  C(n,r) &= e^{{\Phi}(n,r)}
 \end{align*}
-\end{equation}
+%\end{equation}
 
 
 The probability expresses as a logarithm:
 
-
-\begin{equation}
+%\begin{equation}
 \begin{align*}
 {\Pi}_{E_n} &= \left. \left( \sum_{i=0}^{n_E-1}{ln(p_{E_i})} - \sum_{i=n_E}^{N_E}{ln(1-p_{E_i})} \right) 
 \right|_{N_E = min(E,N)} \\
 p_{E_n} &= e^{({\Pi}_{E_n}+\Phi(N,n_E))}
 \end{align*}
-\end{equation}
+%\end{equation}
 
 
 If $M \gg n_E$ and $E \gg n_E$ the probability can be approximated to:
-\begin{equation}
+%\begin{equation}
 \begin{align*}
  p_{E_n} & \approx e^{(n_E \cdot ln(p_{E_0})-(N_E-n_E) \cdot (1-ln(P_{E_0})+\Phi(N,n_E)))} \\ 
          &\approx e^{((2 \cdot n_E - N_E) \cdot ln(p_{E_0}) + n_E - N_E + \Phi(N,n_E))} ~ 
  \text{for} ~ \frac{E}{M} \approx \frac{E-n_E}{M-n_E}
 \
 \end{align*}
-\end{equation}
+%\end{equation}
 
 \paragraph{Security conclusion\\}
 By having a volume of, e.g. $1000$ nodes and $100$ active nodes, which could be a possible amount for a network or shard, then the probability is so low that it will probably never occur in practice. Thus, the actual security is that the nodes are decentralised. Therefore, the node governance protocol is the actual security mechanism, because it regulates the uptake of nodes aiming for it to be democratic, meaning both decentralised and one physical person having only one node.  
