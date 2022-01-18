@@ -1,0 +1,48 @@
+\section{Consensus Probability}
+
+\paragraph{Epoch consensus}
+In the following the probability for the Hashgraph-algorithm to reach an Epoch consensus within $H$ events consecutive is estimated in a simple model as follows.\\
+
+The network participants are given by the flowing parameters.
+\begin{itemize}
+	\item[$H$] is the number of event for a node to reach Epoch-consensus.
+	\item[$M$] is the total number of nodes which are available for the network (This includes active and passive nodes, not prospect nodes). 
+	\item[$n$] is the number of nodes which has not yet been seen by the current node. 
+\end{itemize}
+
+The probability for a node to gossip to another node which has not yet been seen:
+\begin{equation}
+P_{n} = \frac{M-n}{M}
+\end{equation}
+
+The number $H$ is define as more than $2/3$ of the number $M$.
+
+\begin{equation}
+H = floor \left( \frac{2}{3} M \right)
+\end{equation}
+
+The probability for gossip $h$ different nodes in $h$ consecutive events can calculated as:
+\begin{equation}
+P_{h,0} = \prod _{n=1}^{h} P_n
+\end{equation}
+
+
+The probability for gossip $h$ different nodes in $h+1$ consecutive events can calculated as:
+\begin{equation}
+P_{h,i} = \sum_{i=0}^{N-1} \prod _{n=1}^{h+1} P_n
+\end{equation}
+
+A binary vector $S_{h,H}$ is defined as follow:
+
+\begin{align}
+S_{h,H} = [b_{0}, b_{1} .. b_{h-1}] ~ b_{i} \in \mathbb{B}\\
+\text{where}\\
+\sum S_{h,H} = H
+\end{align}
+
+
+
+
+\begin{equation}
+P(n,r) = \frac{n!}{(n-r)!}
+\end{equation}

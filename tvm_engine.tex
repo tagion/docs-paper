@@ -1,0 +1,113 @@
+\section{Tagion Virtual Engine}
+The 
+
+The scripting engine's language is called Funnel. It is based on a stack machine, which is a simple, functional language inspired by the programming language FORTH. \\
+The scripting engine executes at different run levels. The lowest level is full Turing equivalent and is only able to make conditional forward jumps; it cannot run loops or functions. The scripting engine is limited by the number of instructions executed, call stack depth, data stack depth and memory. \\
+
+The limitation is done to prevent a script running into infinite loops. The transaction script can use a library of standard functions which is stored in the DART, and the fingerprint of the script which is stored in the Bull’s eye blockchain that is the current state of the script.
+
+
+\begin{table}[H]
+ \begin{center}
+\begin{tabular}{|p{1cm}|p{3.5cm}|l|}
+\hline
+Run level & Description & Limitation \\
+\hline
+0 & Consensus script & No limits, full Turing equivalent \\
+\hline
+1 & Debug script function (read-only) & Limit resources, read-only call function to level 0 \\
+\hline
+2 & Transaction function & Limit resources and call function to levels 0 and 1 \\
+\hline
+3 & Transaction script & Limit instruction and call function to level 2 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Runlevels for the Scripting engine}
+\label{tab:script_runlevl}
+\end{table}
+
+In contrast to standard FORTH, Funnel is a strictly typed language which supports the types shown in \cref{tab:script_types}.\\
+Converting from one type to another must be explicitly instructed via a type casting function. If the casting fails, the scripting engine generates an error and the script stops. The scripting engine stops on overflow/underflow/divide-by-zero errors and if an operator is operating on invalid types.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+name & Description & D-Type \\
+\hline
+TEXT & UTF-8 text & \texttt{string} \\
+\hline
+INTEGER & signend 64-bits number &  \texttt{long} \\
+\hline
+CARDINAL & Unsignend 64-bits number & \texttt{ulong} \\
+\hline
+BIG & Unsigend big integer number & \texttt{BigUint}  \\
+\hline
+HiBON & HiBON Read/Write-only & \texttt{HiBON} \\
+\hline
+DOCUMENT & HiBON Read only & \texttt{Document} \\
+\hline
+BIN & Byte arrays, used to hold keys and hash value & \texttt{ubyte[]} \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Scripting types supported}
+\label{tab:script_types}
+\end{table}
+
+
+\bfit{Funnel Sample code for a test contract} 
+\lstset{language=bash, numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, tabsize=4}
+
+\begin{lstlisting}
+
+bool run(Document )
+variable trans_obj
+variable trans_scrip_obj
+variable signatures
+variable hash_trans_scrp_obj
+variable payees
+variable payers
+variable no_payers
+variable no_signatures
+variable scrip_eng_obj
+variable bills
+variable no_bills
+
+: loadtransactionobject
+    trans_obj !
+    trans_obj @ 'transaction_scripting_object' doc@
+    trans_scrip_obj !
+    trans_obj @ 'signatures' doc@
+    signatures !
+    trans_scrip_obj @ hash256
+    hash_trans_scrp_obj !
+    trans_scrip_obj @ 'payees' doc@
+    payees !
+    trans_scrip_obj @ 'payers' doc@
+    payers !
+    payers @ length@ no_payers !
+    signatures @ length@ no_signatures !
+;
+
+: loadscriptingengineobject
+    scrip_eng_obj !
+    scrip_eng_obj @ 'bills' doc@
+    bills !
+    bills @ length@ no_bills !
+    scrip_eng_obj @ 'transaction_object' doc@
+    loadtransactionobject
+;
+
+: get_payee_ownerkey
+    local _payee
+    local _payees
+    local _index
+    _index !
+    _payees !
+    _payees @ _index @ doc@ _payee !
+    _payee @ 'ownerkey' doc@
+;
+
+\end{lstlisting}
