@@ -5,65 +5,84 @@ All data exchanged and stored in the network is structured using a data format c
 
 \lstset{language=c++, numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, tabsize=4}%, 
 \begin{lstlisting}
-@safe
-bool less_than(string a, string b) pure
-     in {
-          assert(a.length > 0);
-          assert(b.length > 0);
-     }
-body {
-     static bool is_index(string a, out uint result) pure {
-          import std.conv : to;
-          enum MAX_UINT_SIZE=to!string(uint.max).length;
-          if ( a.length <= MAX_UINT_SIZE ) {
-               if ( a[0] == '0' ) {
-                    return false;
-               }
-               foreach(c; a[1..$]) {
-                    if ( (c < '0') || (c > '9') ) {
-                         return false;
-                    }
-               }
-               immutable number=a.to!ulong;
-               if ( number <= uint.max ) {
-                    result = cast(uint)number;
-                    return true;
-               }
-          }
-          return false;
-     }
-     uint a_index;
-     uint b_index;
-     if ( is_index(a, a_index) && is_index(b, b_index) ) {
-          return a_index < b_index;
-     }
-     return a < b;
+/**
+This function decides the order of the HiBON keys
+Returns:
+true if the value of key a is less than the value of key b
+*/
+@safe @nogc bool less_than(string a, string b) pure nothrow
+	in {
+		assert(a.length > 0);
+		assert(b.length > 0);
+	}
+	do {
+		uint a_index;
+		uint b_index;
+		if (is_index(a, a_index) && is_index(b, b_index)) {
+			return a_index < b_index;
+		}
+	return a < b;
+	}
+
+/**
+Converts from a text to a index
+Params:
+a = the string to be converted to an index
+result = index value
+Returns:
+true if a is an index
+*/
+@safe @nogc bool is_index(const(char[]) a, out uint result) pure nothrow {
+	import std.conv: to;
+
+	enum MAX_UINT_SIZE = to!string(uint.max).length;
+	@nogc @safe static ulong to_ulong(const(char[]) a) pure nothrow {
+		ulong result;
+		foreach (c; a) {
+			result *= 10;
+			result += (c - '0');
+		}
+		return result;
+	}
+
+	if (a.length <= MAX_UINT_SIZE) {
+		if ((a[0] is '0') && (a.length > 1)) {
+			return false;
+		}
+		foreach (c; a) {
+			if ((c < '0') || (c > '9')) {
+				return false;
+			}
+		}
+		immutable number = to_ulong(a);
+		if (number <= uint.max) {
+			result = cast(uint) number;
+			return true;
+		}
+	}
+	return false;
 }
 \end{lstlisting}
 
 Only printable ASCII keys are allowed to be used as keys in the HiBON; this means no control characters or special characters allowed. The key is validated accordingly to the function described below.
 \begin{lstlisting}
-@safe bool is_key_valid(string a) pure nothrow {
-     enum : char {
-          SPACE = 0x20,
-          DEL = 0x7F,
-          DOUBLE_QUOTE = 34,
-          QUOTE = 39,
-          BACK_QUOTE = 0x60
-              }
-     if ( a.length > 0 ) {
-          foreach(c; a) {
-               // Chars between SPACE and DEL is valid
-               // except for " ' ` is not valid
-               if ( (c <= SPACE) || (c >= DEL) ||
-                   ( c == DOUBLE_QUOTE ) || ( c == QUOTE ) ||
-                   ( c == BACK_QUOTE ) ) {
-                    return false;
-               }
-          }
-          return true;
-     }
-     return false;
+/**
+Checks if the keys in the range is ordred
+Returns:
+ture if all keys in the range is ordered
+*/
+@safe bool is_key_ordered(R)(R range) if (isInputRange!R) {
+	string prev_key;
+	while (!range.empty) {
+		if ((prev_key.length == 0) || (less_than(prev_key, range.front))) {
+			prev_key = range.front;
+			range.popFront;
+		}
+		else {
+			return false;
+		}
+	}
+	return true;
 }
 \end{lstlisting}
 

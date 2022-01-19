@@ -1,6 +1,7 @@
 \section{Consensus Probability}
 
-\paragraph{Epoch consensus}
+\paragraph{Epoch consensus\\}
+
 In the following the probability for the Hashgraph-algorithm to reach an Epoch consensus within $H$ events consecutive is estimated in a simple model as follows.\\
 
 The network participants are given by the flowing parameters.
@@ -10,9 +11,9 @@ The network participants are given by the flowing parameters.
 	\item[$n$] is the number of nodes which has not yet been seen by the current node. 
 \end{itemize}
 
-The probability for a node to gossip to another node which has not yet been seen:
+The probability node n to gossip node m can be described as:
 \begin{equation}
-P_{n} = \frac{M-n}{M}
+P_G = \left . \frac{1}{M-1} \right|_{n \neq m}
 \end{equation}
 
 The number $H$ is define as more than $2/3$ of the number $M$.
@@ -21,15 +22,31 @@ The number $H$ is define as more than $2/3$ of the number $M$.
 H = floor \left( \frac{2}{3} M \right)
 \end{equation}
 
-The probability for gossip $h$ different nodes in $h$ consecutive events can calculated as:
+The probability for gossip node $n$ to node $m$ in $N$ consecutive events can described as:
 \begin{equation}
-P_{h,0} = \prod _{n=1}^{h} P_n
+P_{n,m,N} = \left. P_{n,m}^N \right|_{N > 0}
 \end{equation}
 
-
+The probability for $m$ nodes to gossip to a node in same event slot can be expressed as:
+\begin{equation}
+P_{m} = P_{G}^m
+\end{equation}
+\lstset{language=bash, numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, tabsize=4}%, 
+\begin{lstlisting}
+gossip [N=    11 strong=  5 bw=        171]
+gossip [N=    31 strong=  9 bw=       1396]
+gossip [N=   101 strong= 10 bw=      14918]
+gossip [N=  1001 strong= 14 bw=    1498538]
+gossip [N= 10001 strong= 20 bw=  149868334]
+gossip [N=100001 strong= 24 bw=14996214212]
+\end{lstlisting}
 The probability for gossip $h$ different nodes in $h+1$ consecutive events can calculated as:
 \begin{equation}
 P_{h,i} = \sum_{i=0}^{N-1} \prod _{n=1}^{h+1} P_n
+\end{equation}
+
+\begin{equation}
+X_n = \sum_{i=0}^{infinity} {P_n}^n
 \end{equation}
 
 A binary vector $S_{h,H}$ is defined as follow:

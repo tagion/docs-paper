@@ -3,8 +3,35 @@
 This document describes the Tagion core network.\\
 The tagion core network include the Byzantine consensus algorithm, consensus database, basic node validator selections, 
 
-\subsection{Node Stack}
-The node stack is implemented in the programming language D with some C libraries for crypto functions. It is structured, as shown in the figure below. 
+\subsection{Network Architecture}
+The Tagion network architecture consist of a collections of computer nodes which are able to send messages between each other (A \bfit{computer node} is named \bfit{node} in this document). Each node can send a message to any other node in the network.\\
+The nodes in the network has different roles and a node will change the role over the lifetime depended controlled by the Tagion consensus rule.\\ 
+
+The node roles are:
+\begin{itemize}
+	\item[\bfit{Active Node}] The node in this role category takes care of the validations.
+	\item[\bfit{Standby Node}] Those nodes are waiting to be selected  as validators.
+	\item[\bfit{Swap Node}] Those nodes has been selected to be swapped with an \bfit{Active Node} and become a validator.  
+	\item[\bfit{Prospect Node}] Nodes in this category are waiting to become and 'real' node in the network 
+	\label{tab:node_roles}
+\end{itemize}
+
+All the nodes communicates via protocol call libp2p \cite{libp2p}. The role of the node actors are selected randomly (\bfit{UDR} \cref{sec:SMT}) according to the node consensus selection rules \cref{sec:mutation}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{fig/network_architecture.eps}
+	% dart_bw.eps: 17766x12625 px, 300dpi, 150.42x106.89 cm, bb=0 0 4264 3030
+	\caption{The Network Architecture}
+	\label{fig:network_architecture}
+\end{figure}
+
+The \bfit{Active Node}'s validates the transaction and used the Hashgraph algorithm \cref{sec:hashgraph_cm} to reach consensus. The Hashgraph algorithm is capable of producing a consensus order list of transaction. This means that all the \bfit{Active Node}'s will produces the same order of transactions.\\
+** Read from DARt ...
+ 
+
+\subsection{Node Architecture}
+The node stack is implemented in the programming language D with some C and Go libraries for crypto, network and virtual engine functions. It is structured, as shown in the figure below. 
 
 \begin{table}[H]
 	{%
@@ -18,7 +45,7 @@ The node stack is implemented in the programming language D with some C librarie
 				\hline
 				User API - TLS 1.2 & P2P Network\\
 				\hline
-				\mc{2}{|c|}{Scripting Engine}\\
+				\mc{2}{|c|}{Tagion Virtual Machine}\\
 				\hline
 				\mc{2}{|c|}{Consensus mechanism : Hashgraph}\\
 				\hline
@@ -37,14 +64,14 @@ The node stack is implemented in the programming language D with some C librarie
 A Tagion Node is divided into units as shown in \cref{fig:node_service} and each unit handles a service function in the following manner:
 
 A smart-contract is sent to the Transaction-service-unit fetching the inputs from the DART unit and verifying their signatures. The DART-unit connects to other DARTs via the P2P-unit. The transaction-unit forwards the smart-contract including the inputs to the Coordinator-unit and this unit adds it to an event that is gossiped to the network via the P2P-unit.\\
-When the Coordinator receives an event with a smart-contract, it is executed via the Scripting-Engine-unit, and the results of the outputs are verified.\\ 
+When the Coordinator receives an event with a smart-contract, it is executed via the \abbrev{TVM}{Tagion Virtual Machine} unit, and the results of the outputs are verified.\\ 
 When the Coordinator finds an epoch, this epoch is forwarded to the Transcript-service-unit that evaluates the correct order and requests the DART-unit to erase the inputs and add the newly generated outputs.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\textwidth]{fig/node_service.eps}
 	% dart_bw.eps: 17766x12625 px, 300dpi, 150.42x106.89 cm, bb=0 0 4264 3030
-	\caption{The Tagion Node service structure}
+	\caption{The Tagion Node Architure}
 	\label{fig:node_service}
 \end{figure}
 
@@ -57,9 +84,8 @@ Each of the services is running as independent tasks and communication between e
 	\item[\bfit{Transaction}] This service receives the incoming transaction script, validates, verifies and fetches the data from the DART and sends the information to the Coordinator.
 	\item[\bfit{DART}] Services to the Distributed-database
 	\item[\bfit{P2P}] This service handles the peer-to-peer communication protocol used to communicate between the nodes
-	\item[\bfit{ScriptingEngine}] Handles the executions of the scripts
+	\item[\bfit{TVM}] Handles the executions of the smart contracts
 	\item[\bfit{Transcript}] Services the Epoch and orders the script execution
 	\item[\bfit{Logger}] The service handles information logging for the different services
-	\item[\bfit{Monitor}] The Monitor service is used to monitor the activities locally
-	\item[\bfit{HeartBeat}] This service is only used in test-mode. This service enables the nodes to execute sequentially, simplifying network debugging.
+	\item[\bfit{Monitor}] The Monitor service is used to graphical monitor the activities locally via a web interface.
 \end{itemize}
