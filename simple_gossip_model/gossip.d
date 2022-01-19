@@ -1,3 +1,4 @@
+#!/usr/bin/env rdmd
 
 import std.algorithm.iteration: each;
 import std.bitmanip : BitArray;
@@ -39,10 +40,20 @@ struct Gossip {
 }
 
 int main(string[] args) {
-    foreach(N;[11,31,101,1001,10_001,100_001]) {
+    const nodes=[11,31,101,1001,10_001,100_001];
+    uint[] epochs;
+    double[] bws;
+
+    foreach(N;nodes) {
         auto gossip=Gossip(N);
         const result=gossip.epoch;
         writefln("gossip [N=%6d strong=%3d bw=%11.0f]", N, result.strong, result.bw);
+        epochs~=result.strong;
+        bws~=result.bw;
     }
+    writefln(" nodes=%s", nodes);
+    writefln("epochs=%s", epochs);
+    writefln("   bws=%s", bws);
+
     return 0;
 }

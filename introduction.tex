@@ -26,10 +26,9 @@ All the nodes communicates via protocol call libp2p \cite{libp2p}. The role of t
 	\label{fig:network_architecture}
 \end{figure}
 
-The \bfit{Active Node}'s validates the transaction and used the Hashgraph algorithm \cref{sec:hashgraph_cm} to reach consensus. The Hashgraph algorithm is capable of producing a consensus order list of transaction. This means that all the \bfit{Active Node}'s will produces the same order of transactions.\\
-** Read from DARt ...
+The \bfit{Active Node}'s validates the transaction and used the Hashgraph algorithm \cref{sec:hashgraph_cm} to reach consensus. The Hashgraph algorithm is capable of producing a consensus order list of transaction (Defined as \bfit{transaction list}). This means that all the \bfit{Active Node}'s will produces the same order of transactions.\\
+The transaction list is processed in that order the procedure for execution can be found in \cref{sec:network}.
  
-
 \subsection{Node Architecture}
 The node stack is implemented in the programming language D with some C and Go libraries for crypto, network and virtual engine functions. It is structured, as shown in the figure below. 
 
@@ -89,3 +88,47 @@ Each of the services is running as independent tasks and communication between e
 	\item[\bfit{Logger}] The service handles information logging for the different services
 	\item[\bfit{Monitor}] The Monitor service is used to graphical monitor the activities locally via a web interface.
 \end{itemize}
+
+
+Estimated bandwidth requirement and the average propagation for a transaction the formulas in \cref{sec:gossip_model}.
+ 
+From simple experimental model result.\\
+
+Example for a network with nodes $N=11$ an event size of $E_{size}=500bytes$ and network delay of $t_{net}=300ms$ the estimated epoch propagation is:\\
+\begin{equation*}
+t_{epoch}=3.5 \cdot 2.2 \cdot ln(11) \cdot 300ms = 5.
+\end{equation*}
+and the bandwidth of:
+\begin{equation*}
+t_{epoch}=3.5 \cdot 2.2 \cdot ln(1) \cdot 300ms = 5.5s
+\end{equation*}
+
+\begin{align*}
+n_{round} &= 2.2 \cdot ln(11) &\approx  5.27\\
+t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 5.5s \\
+B &= 500bytes \cdont 11^2 &= 60500bytes \\
+BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 28kbit/s \\
+\end{align*}
+And with $N=31$:
+\begin{align*}
+n_{round} &= 2.2 \cdot ln(31) & \approx  8.6\\
+t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 8s \\
+B &= 500bytes \cdont 101^2 & \approx 481kbytes \\
+BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 152kbit/s \\
+\end{align*}
+And with $N=101$:
+\begin{align*}
+n_{round} &= 2.2 \cdot ln(101) & \approx  10.15\\
+t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 10.6s \\
+B &= 500bytes \cdont 101^2 & \approx 5.1Mbytes \\
+BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 1.2Mbit/s \\
+\end{align*}
+And with $N=1001$:
+\begin{align*}
+n_{round} &= 2.2 \cdot ln(11) & \approx  15\\
+t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 16s \\
+B &= 500bytes \cdont 1001^2 &\approx 501Mbytes \\
+BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 80Mbit/s \\
+\end{align*}
+
+In this example increase round 5s when the $N$ is increased by decade and the bandwidth requirement is increased around 50 times or more.

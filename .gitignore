@@ -28,3 +28,7 @@ dex/package-lock.json
 
 # texstudio
 tagion_tech_paper.run.xml
+
+*.o
+*.html
+gossip

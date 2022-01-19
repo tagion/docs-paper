@@ -1,9 +1,10 @@
-\section{Consensus Probability}
+\section{Gossip Model}\label{sec:gossip_model}
 
 \paragraph{Epoch consensus\\}
 
 In the following the probability for the Hashgraph-algorithm to reach an Epoch consensus within $H$ events consecutive is estimated in a simple model as follows.\\
 
+To estimate the bandwidth and the propagation delay simple simulation model has been implemented. 
 The network participants are given by the flowing parameters.
 \begin{itemize}
 	\item[$H$] is the number of event for a node to reach Epoch-consensus.
@@ -11,55 +12,64 @@ The network participants are given by the flowing parameters.
 	\item[$n$] is the number of nodes which has not yet been seen by the current node. 
 \end{itemize}
 
-The probability node n to gossip node m can be described as:
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|l|p{4cm}|p{3cm}|}
+			\hline
+			Nodes $N$ & Round Factor $n_{round}$ & Bandwidth-Scale $B$ \\
+			\hline
+			11 & 5 & 171 \\
+			\hline
+			31 & 8 & 1396 \\
+			\hline
+			101 & 12 & 14918 \\
+			\hline
+			1001 & 16 & 1498538 \\
+			\hline
+			10001 & 20 & 149868334 \\
+			\hline
+			100001 & 24 & 14996214212 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Gossip simulation model} 
+	\label{tab:gossip_model}
+\end{table}
+
+From the simulation the following expression can be driven.\\
+
+The average events per round: 
 \begin{equation}
-P_G = \left . \frac{1}{M-1} \right|_{n \neq m}
+n_{round} = 2.2 \cdot ln(N) 
 \end{equation}
-
-The number $H$ is define as more than $2/3$ of the number $M$.
-
-\begin{equation}
-H = floor \left( \frac{2}{3} M \right)
-\end{equation}
-
-The probability for gossip node $n$ to node $m$ in $N$ consecutive events can described as:
-\begin{equation}
-P_{n,m,N} = \left. P_{n,m}^N \right|_{N > 0}
-\end{equation}
-
-The probability for $m$ nodes to gossip to a node in same event slot can be expressed as:
-\begin{equation}
-P_{m} = P_{G}^m
-\end{equation}
-\lstset{language=bash, numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, tabsize=4}%, 
-\begin{lstlisting}
-gossip [N=    11 strong=  5 bw=        171]
-gossip [N=    31 strong=  9 bw=       1396]
-gossip [N=   101 strong= 10 bw=      14918]
-gossip [N=  1001 strong= 14 bw=    1498538]
-gossip [N= 10001 strong= 20 bw=  149868334]
-gossip [N=100001 strong= 24 bw=14996214212]
-\end{lstlisting}
-The probability for gossip $h$ different nodes in $h+1$ consecutive events can calculated as:
-\begin{equation}
-P_{h,i} = \sum_{i=0}^{N-1} \prod _{n=1}^{h+1} P_n
-\end{equation}
-
-\begin{equation}
-X_n = \sum_{i=0}^{infinity} {P_n}^n
-\end{equation}
-
-A binary vector $S_{h,H}$ is defined as follow:
-
-\begin{align}
-S_{h,H} = [b_{0}, b_{1} .. b_{h-1}] ~ b_{i} \in \mathbb{B}\\
-\text{where}\\
-\sum S_{h,H} = H
-\end{align}
-
-
-
+The average estimated time between epochs: 
 
 \begin{equation}
-P(n,r) = \frac{n!}{(n-r)!}
+t_{epoch} = K \cdot n_{round} \cdot t_{net}
 \end{equation}
+Whe the following is defined as:
+\begin{itemize}
+	\item[$N$] is the number of active nodes running the networks. 
+	\item[$K$] is the epoch scaling factor (Typical value of $K$ is typical a little larger than 3)
+	\item[$n_{round}$] is the average events for between round. 
+	\item[$t_{net}$] is the network delay. 
+	\item[$t_{epoch}$] is the average propagation delay per transaction. 
+\end{itemize}
+\\
+
+Estimated bandwidth scale-factor:
+\begin{equation}
+B = E_{size} \cdot N^2}
+\end{equation}
+
+Estimated bandwidth requirement:
+\begin{equation}
+BW = \frac{B}{n_{round\cdot t_{net}}}
+\end{equation}
+
+\begin{itemize}
+	\item[$B$] is the average bandwidth scale factor used by a node.
+	\item[$E_{size}$] is the average memory size of an event including transaction data. 
+	\item[$BW$] is the average bandwidth used by a node.
+\end{itemize}
