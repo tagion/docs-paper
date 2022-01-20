@@ -91,8 +91,8 @@ ture if all keys in the range is ordered
 
 Any data types which are not defined in \cref{tab:hibon} are illegal and must be rejected by the network. The types used in the table are primarily the types used in D except for a few as \texttt{\{\}} and \texttt{[]}.
 
-\subsection{HRPC – HiBON Remote Procedure Call}
-HRPC works like JSON-RPC just with signed binary data, the above-defined HiBON format. It means the data is hash-invariant enabling hash- and signature functions to be executed quickly and unambiguously.
+\subsection{HiRPC – HiBON Remote Procedure Call}
+HiRPC works like JSON-RPC just with signed binary data, the above-defined HiBON format. It means the data is hash-invariant enabling hash- and signature functions to be executed quickly and unambiguously.
 
 \begin{table}[H]
 \begin{center}
@@ -100,18 +100,18 @@ HRPC works like JSON-RPC just with signed binary data, the above-defined HiBON f
       \hline
       Parameter & Description & Type & Access \\
       \hline
-      $\$type$ & Set contract type to 'HRPC' &  \texttt{string} & \texttt{ro} \\
+      $\$type$ & Set contract type to 'HiRPC' &  \texttt{string} & \texttt{ro} \\
       \hline
       $\$pkey$ & Public key &  \texttt{bin} & \texttt{ro} \\
       \hline
       $\$sign$ & Signature of $\$msg$ &  \texttt{bin} & \texttt{ro} \\
       \hline
-      $\$msg$ & Message object \cref{tab:HRPC_method_message}, \cref{tab:HRPC_success_message}, \cref{tab:HRPC_error_message} &  \texttt{\{\}} & \texttt{ro} \\
+      $\$msg$ & Message object \cref{tab:HiRPC_method_message}, \cref{tab:HiRPC_success_message}, \cref{tab:HiRPC_error_message} &  \texttt{\{\}} & \texttt{ro} \\
       \hline
   \end{tabular}
 \end{center}
-\caption{HRPC format} 
-\label{tab:HRPC_format}
+\caption{HiRPC format} 
+\label{tab:HiRPC_format}
 \end{table}
 
 \begin{table}[H]
@@ -128,8 +128,8 @@ HRPC works like JSON-RPC just with signed binary data, the above-defined HiBON f
       \hline
   \end{tabular}
 \end{center}
-\caption{HRPC method message object} 
-\label{tab:HRPC_method_message}
+\caption{HiRPC method message object} 
+\label{tab:HiRPC_method_message}
 \end{table}
 
 \begin{table}[H]
@@ -144,8 +144,8 @@ HRPC works like JSON-RPC just with signed binary data, the above-defined HiBON f
       \hline
   \end{tabular}
 \end{center}
-\caption{HRPC success message object } 
-\label{tab:HRPC_success_message}
+\caption{HiRPC success message object } 
+\label{tab:HiRPC_success_message}
 \end{table}
 
 \begin{table}[H]
@@ -156,12 +156,12 @@ HRPC works like JSON-RPC just with signed binary data, the above-defined HiBON f
       \hline
       $\$id$ & Message id & \texttt{string} & \texttt{ro} \\
       \hline
-      $\$msg$ & Error object \cref{tab:HRPC_error} & \texttt{\{\}} & \texttt{ro} \\
+      $\$msg$ & Error object \cref{tab:HiRPC_error} & \texttt{\{\}} & \texttt{ro} \\
       \hline
   \end{tabular}
 \end{center}
-\caption{HPPC error response object } 
-\label{tab:HRPC_error_message}
+\caption{HiPPC error response object } 
+\label{tab:HiRPC_error_message}
 \end{table}
 
 
@@ -171,7 +171,7 @@ HRPC works like JSON-RPC just with signed binary data, the above-defined HiBON f
       \hline
       Parameter & Description & Type & Access \\
       \hline
-      $\$code$ & Set contract type to 'HRPC' & \texttt{uint} & \texttt{ro} \\
+      $\$code$ & Set contract type to 'HiRPC' & \texttt{uint} & \texttt{ro} \\
       \hline
       $\$msg$ & Error message  & \texttt{string} & \texttt{ro} \\
       \hline
@@ -179,6 +179,6 @@ HRPC works like JSON-RPC just with signed binary data, the above-defined HiBON f
       \hline
   \end{tabular}
 \end{center}
-\caption{HRPC error object } 
-\label{tab:HRPC_error}
+\caption{HiRPC error object } 
+\label{tab:HiRPC_error}
 \end{table}
