@@ -2,27 +2,33 @@
 
 import std.stdio;
 import std.math;
-import std.algorithm.comparison :min;
+import std.algorithm.comparison :min, max;
 
 struct Attack {
     const uint M;
     const uint N;
     const uint E;
     double pE(const uint n) const nothrow {
-        return double(E-n)/double(M-n);
+        if (E>n) {
+            return double(E-n)/double(M-n);
+        }
+        return double(0);
     }
 
     double pnE(const uint nE) const  {
         const NE=min(E, N);
-        double result;
+        double result=1;
         const n=N;
         uint k=1;
-        const _pE=pE(nE);
-        result = pow(_pE, nE);
-        result*= pow((1-_pE), (NE-nE));
-
-        foreach(i;0..NE) {
+        result*= pow(1-pE(nE), (NE-nE));
+        //writefln("nE=%d result=%e", nE, result);
+        foreach(i;1..max(N-nE,nE)) {
+            //writefln("i=%d NE=%d nE=%d (N-nE)=%d", i, NE, nE, (N-nE));
+            if (i <= nE) {
+                result*= pE(i);
+            }
             if (k<=(N-nE)) {
+                //       writefln("k=%d", k);
                 result *= double(k+1)/double(N-k);
                 k++;
             }
@@ -31,7 +37,6 @@ struct Attack {
     }
     double pn_nE(const uint nE) const {
         double result=0;
-        uint k=1;
         foreach(i;nE..N) {
             result += pnE(i);
         }
@@ -40,14 +45,13 @@ struct Attack {
 
     void estimate(const uint nE) {
         writefln("nE           =%d", nE);
-        writefln("(E/M)        =%e", double(E)/double(M));
+        writefln("(E-nE/M)     =%e", double(E-nE)/double(M));
         writefln("(E-nE)/(M-nE)=%e", double(E-nE)/double(M-nE));
     }
 
 }
 
 int main(string[] args) {
-//    const nE=double(10);
     const M=1001;
     const N=101;
     const E=101;
@@ -56,12 +60,6 @@ int main(string[] args) {
     const nE_2_3=N*2/3+1;
     attack.estimate(nE_1_3);
     attack.estimate(nE_2_3);
-// //    writefln("%s",  Security.comb(100,50));
-//     writefln("(E/M)=%e (E-nE)/M-nE)=%s", double(E)/double(M),
-//         double(E)/double(M),
-//         attack.
-    // writefln("%e",  attack.pE(21));
-    // writefln("%e",  attack.pnE(21));
     writefln("Total  nodes M=%d", M);
     writefln("Active nodes N=%d", N);
     writefln("Evil   nodes E=%d", E);

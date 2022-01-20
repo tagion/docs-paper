@@ -55,13 +55,13 @@ A network is defined to be evil if the network contains $n_E$ or more evil nodes
 
 The probability that $n_E$ nodes out of $N$ nodes are:
 \begin{equation}
- p_{n_E} = \left. {p_{E_i}^{n_E}} \cdot {(1-p_{E_i})^{N_E-n_E} \cdot C(N,n_E)} \right| _{N_E = min(E,N)}
+ p_{n_E} \leq \left. \left( \prod_{i=1}^{n_E}{p_{E_i}} \right) \cdot {(1-p_{E_{n_E}})^{N-n_E} \cdot C(N,n_E)} \right| _{N_E = min(E,N)}
 \end{equation}
 
 
 If $M \gg n_E$  and $E \gg n_E$  the probability can be approximated to:
 \begin{equation}
- p_{n_E} \approx p_{E_0}^{n_E} \cdot (1-p_{E_0})^{N-n_E} \cdot C(N,n_E) ~ \text{for} ~ \frac{E}{M} \approx \frac{E-n_E}{M-n_E}
+ p_{n_E} \approx p_{E_0}^{n_E} \cdot (1-p_{E_0})^{N-n_E} \cdot C(N,n_E) ~ \text{for} ~ \frac{E-n_E}{M} \approx \frac{E-n_E}{M-n_E}
 \end{equation}
 
 The probability that $n_E$ nodes or more are:
@@ -72,13 +72,13 @@ The probability that $n_E$ nodes or more are:
 
 Example if $N=100$ and $M=1000$ and the attacker has $E$ nodes, the probability that the attacker can prevent the network from reaching a consensus is:
 \begin{align*}
- M &= 31 & M &= 200 & M &= 1001 \\
+ M &= 31 & M &= 200 & M &= 301 \\
  N &= 11 & N &= 31 & N &= 101 \\
  E &= 11 & E &= 100 & E &= 101 \\
  n_E &= 4 & n_E &= 11 & n_E &= 34 \\
- p_{n \ge 4} &= 4.1^{-5} & 
- p_{n \ge 11} &= 1.37 \cdot 10^{-13} & 
- p_{n \ge 34} &= 7.36 \cdot 10^{-67}
+ p_{n \ge 4} &\leq 6.0 \cdot 10^{-5} & 
+ p_{n \ge 11} &\leq 6.659 \cdot 10^{-12} & 
+ p_{n \ge 34} &\leq 3.0 \cdot 10^{-64}
 \end{align*}
 
 For an attacker to take over the network:
@@ -87,9 +87,9 @@ For an attacker to take over the network:
  N &= 11 & N &= 31 & N &= 101 \\
  E &= 11 & E &= 100 & E &= 101 \\
  n_E &= 4 & n_E &= 21 & n_E &= 68 \\
- p_{n \ge 4 } &= 1.36 \cdot 10^{-13} & 
- p_{n \ge 21} &= 9.34035 \cdot 10^{-54} & 
- p_{n \ge 68} &= 7.2 \cdot 10^{-125}
+ p_{n \ge 4 } &\leq 1.9 \cdot 10^{-6} & 
+ p_{n \ge 21} &\leq 6.657 \cdot 10^{-12} & 
+ p_{n \ge 68} &\leq 3.9 \cdot 10^{-105}
 \end{align*}
 
 
@@ -122,7 +122,7 @@ If $M \gg n_E$ and $E \gg n_E$ the probability can be approximated to:
 \begin{align*}
  p_{E_n} & \approx e^{(n_E \cdot ln(p_{E_0})-(N_E-n_E) \cdot (1-ln(P_{E_0})+\Phi(N,n_E)))} \\ 
          &\approx e^{((2 \cdot n_E - N_E) \cdot ln(p_{E_0}) + n_E - N_E + \Phi(N,n_E))} ~ 
- \text{for} ~ \frac{E}{M} \approx \frac{E-n_E}{M-n_E}
+ \text{for} ~ \frac{E-n_E}{M} \approx \frac{E-n_E}{M-n_E}
 \
 \end{align*}
 %\end{equation}
