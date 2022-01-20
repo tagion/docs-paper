@@ -1,0 +1,36 @@
+\section{Consensus order function}\label{sec:order_function}
+The code sample below shows the implementation of the consensus order function.
+\lstset{language=c++, numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, tabsize=4}%, 
+\begin{lstlisting}
+bool order_less(const Event a, const Event b) @safe {
+	order_compare_iteration_count++;
+	if (a.received_order is b.received_order) {
+		if (a._mother && b._mother) {
+			return order_less(a._mother, b._mother);
+		}
+		if (a._father && b._father) {
+			return order_less(a._father, b._father);
+		}
+		if (!a._father) {
+			return false;
+		}
+		if (b._father) {
+			return true;
+		}
+
+		bool rare_less(Buffer a, Buffer b) {
+			const ab = hashgraph.hirpc.net.calcHash(a ~ b);
+			const ba = hashgraph.hirpc.net.calcHash(b ~ a);
+			const A = (BitMask(ab).count);
+			const B = (BitMask(ba).count);
+			if (A is B) {
+				return rare_less(ab, ba);
+			}
+			return A < B;
+		}
+
+		return rare_less(a.fingerprint, b.fingerprint);
+	}
+	return a.received_order < b.received_order;
+}
+\end{lstlisting}
