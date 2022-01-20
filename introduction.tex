@@ -9,9 +9,9 @@ The nodes in the network has different roles and the nodes will change roles ove
 
 The node roles are:
 \begin{itemize}
-	\item[\bfit{Active Node}] The node in this role category takes care of the validations.
-	\item[\bfit{Standby Node}] Those nodes are waiting to be selected  as validators.
-	\item[\bfit{Swap Node}] Those nodes has been selected to be swapped with an \bfit{Active Node} and become a validator.  
+	\item[\bfit{Active Node}] The node in this role category takes care of the validations and consensus.
+	\item[\bfit{Standby Node}] A node waiting to be selected as an active node.
+	\item[\bfit{Swap Node}] A node to be swapped with an \bfit{Active Node} and become a validator.  
 	\item[\bfit{Prospect Node}] Nodes in this category are waiting to become and 'real' node in the network 
 	\label{tab:node_roles}
 \end{itemize}
@@ -27,8 +27,8 @@ All the nodes communicates via protocol call libp2p \cite{libp2p}. The role of t
 	\label{fig:network_architecture}
 \end{figure}
 
-The \bfit{Active Node}'s validates the transaction and used the Hashgraph algorithm \cref{sec:hashgraph_cm} to reach consensus. The Hashgraph algorithm is capable of producing a consensus order list of transaction (Defined as \bfit{transaction list}). This means that all the \bfit{Active Node}'s will produces the same order of transactions.\\
-The transaction list is processed in that order the procedure for execution can be found in \cref{sec:network}.
+The \bfit{Active Node}'s validates the transaction and used the Hashgraph algorithm \cref{sec:hashgraph_cm} to reach consensus. The Hashgraph algorithm is capable of producing a consensus ordered list of transaction (Defined as \bfit{transaction list}). This means that all the \bfit{Active Node}'s will produces the same order of transactions.\\
+The transaction list is execution in the consensus order \cref{sec:network}.
  
 \subsection{Node Architecture}
 The node core program is implemented in the programming language D with some C and Go libraries for crypto, network and virtual engine functions. It is structured, as shown in the figure below. 
@@ -63,12 +63,14 @@ The node core program is implemented in the programming language D with some C a
 
 A Tagion Node is divided into units as shown in \cref{fig:node_service} and each unit handles a service function in the following manner:
 
-A smart-contract is sent to the Transaction-service-unit which are fetching the inputs date form the distributed Data-base DART unit (see \cref{sec:DART}) and verifying their signatures of the inputs. The DART-unit connects to other DARTs via the P2P-unit. The transaction-unit forwards the smart-contract to the Coordinator-unit and this unit that is gossiped to the network via the P2P-unit.\\
+A smart-contract is sent to the Transaction-service-unit which are fetching the inputs date form the distributed Data-base DART unit (see \cref{sec:DART}) and verifying their signatures of the inputs. The DART-unit connects to other DARTs via the P2P-unit. The transaction-unit forwards the smart-contract to the Coordinator-unit and this information is gossiped to the network via the P2P-unit.\\
 When the Coordinator receives an event with a smart-contract, the smart-contract contract is verified and executed via the \abbrev{TVM}{Tagion Virtual Machine} unit, and the results of the outputs are verified.\\
 The Coordinator adds it to an event in the Hashgraph and gossips the informations via the P2P-unit to other nodes in the network.    
-When the Coordinator finds an epoch, it make a list of ordered transactions and forwards this list to the Transcript-service-unit. The transcript-unit executes the smart-contracts in order and produces list called an Recorder. A Recorder is contains list of all the inputs to be erased and all the outputs to be added. The Coordinator send Recorder to the DART-uint which executes this list. The DART-unit forwards the Recorder to the Recorder-unit and the Recorder adds this to a block-chain.\\
-In the case that the Coordinator resolves that super majority of the active-nodes dose not agree the Coordinator send an undo-instruction to the Recorder-unit.\\
-If the Recorder-unit receives an undo-instruction the recorder will send the Recorder-list in reverse order to the DART-unit and the DART-unit will perform this action and put the DART in the previous state before the last Epoch.
+When the Coordinator finds an epoch, it make a list of ordered transactions and forwards this list to the Transcript-service-unit. The transcript-unit executes the smart-contracts in order and produces list called an Recorder. A Recorder contains list of DART instructs where the inputs will be removed and outputs added. The Coordinator sends the Recorder to the DART-uint which executes this list. The DART-unit forwards the Recorder to the Recorder-unit and the Recorder adds this to a block-chain.\\
+In the case where network does not reach consensus, the Coordinator will send an undo-instruction to the Recorder-unit.\\
+If the Recorder-unit receives an undo-instruction the recorder will send the undo-Recorder-list to the DART-unit and the DART-unit will perform this action and put the DART in the previous state before the last Epoch.
+An undo-Recorder-list is defined a Recorder where the order is reversed and the (remove/add) instructions is inverted to (add/remove).
+
 The Logger-unit and the Monitor-unit used for debugging and monitoring the network.
 
 \begin{figure}[H]

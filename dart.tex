@@ -1,6 +1,6 @@
 \section{Distributed Database (DART)}\label{sec:DART}
 
-\abbrev{DART}{Distributed Archive of Random Transactions}
+\abbrev{DART}{Distributed Archive of Random Transactions} [Patent \cite{dart_patent}]
  is built to store and keep track of transactions in the Tagion network. The database efficiently handles the removal and addition of transactions in a secure and distributed manner.
 Each transaction is stored in a distributed hash-table using a cryptographic hash of the transaction T data. Each transaction is identified by a unique hash value h. The transaction is put into a table ordered by the numerical value of the hash.
 \begin{equation}

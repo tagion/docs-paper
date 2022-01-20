@@ -14,17 +14,35 @@ The order $\Omega$ is calculated as:
 The events in the epoch list are sorted by the order $\Omega$. If the order of two events is equal, the hash $h$ of the event is used to calculate the order.
 The following expression is used to order the events:
 
-\begin{equation}
- {l}_{A,B} = 
+\begin{align}
+ {l}(A,B) & = 
     \begin{cases}
+         {l'}(A,B) &  	\text{if}  ~ ({\Omega}_{A} = {\Omega}_{B} )  \\ 
         {{\Omega}_{A} < {\Omega}_{B}} & 
-        \text{if}  ~ ({\Omega}_{A} \neq {\Omega}_{B} )  \\ 
-        H (    {h}_{A} \parallel {h}_{B} )  < H (    {h}_{B} \parallel {h}_{A} ) & 
         \text{otherwise}
-    \end{cases}
-\end{equation}
+    \end{cases} 
+    \label{equ:order}    
+\end{align}
 
-The parameter ${l}_{A,B}$ is $'true'$ if event A is ordered before event B.
+\begin{align}
+{l'}(A,B) & = 
+\begin{cases}
+{l}(A_{mother},B_{mother}) &  	
+\text{if}  ~ (\text{A has a mother} ~ \&  ~ \text{B has a mother}) \\ 
+{l}(A_{father},B_{father}) &  	
+\text{if}  ~ (\text{A has a father} ~ \&  ~ \text{B has a father}) \\ 
+0 &  	
+\text{if}  ~ (\text{A has a no father}) \\ 
+1 &  	
+\text{if}  ~ (\text{B has a father}) \\ 
+H (    {h}_{A} \parallel {h}_{B} )  < H (    {h}_{B} \parallel {h}_{A} ) & 
+\text{otherwise}
+\end{cases} 
+\end{align}
+
+
+
+If parameter $l(A,B)$ is $'true'$ if event A is ordered before event B (see \cref{sec:)
 
 \begin{figure}[H]
  \centering
