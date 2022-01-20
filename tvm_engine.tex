@@ -1,17 +1,15 @@
-\section{Tagion Virtual Engine}
-The 
+\section{Tagion Virtual Engine}\label{sec:TVM}
 
-The scripting engine's language is called Funnel. It is based on a stack machine, which is a simple, functional language inspired by the programming language FORTH. \\
+The scripting engine's language is called Funnel. It is based on a stack machine, which is a simple, functional language inspired by the programming language FORTH. 
 The scripting engine executes at different run levels. The lowest level is full Turing equivalent and is only able to make conditional forward jumps; it cannot run loops or functions. The scripting engine is limited by the number of instructions executed, call stack depth, data stack depth and memory. \\
 
 The limitation is done to prevent a script running into infinite loops. The transaction script can use a library of standard functions which is stored in the DART, and the fingerprint of the script which is stored in the Bull’s eye blockchain that is the current state of the script.
 
-
 \begin{table}[H]
  \begin{center}
-\begin{tabular}{|p{1cm}|p{3.5cm}|l|}
+\begin{tabular}{|p{2cm}|p{3.5cm}|l|}
 \hline
-Run level & Description & Limitation \\
+Run level & Description & Limitation\\
 \hline
 0 & Consensus script & No limits, full Turing equivalent \\
 \hline

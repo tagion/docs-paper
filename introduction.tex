@@ -1,11 +1,10 @@
 \section{Introduction}
-
 This document describes the Tagion core network.\\
-The tagion core network includes the byzantine consensus algorithm, the consensus database and description of node validators and the basic node selections. 
-
+The tagion core network includes the byzantine consensus algorithm, the consensus database and description of node validators and the basic node selections.
 \subsection{Network Architecture}
-The Tagion network architecture consist of a collections of computer nodes which are able to send messages between each other (A \bfit{computer node} is named \bfit{node} in this document). Each node can send a message to any other node in the network.\\
-The nodes in the network has different roles and the nodes will change roles over the lifetime depended controlled by the Tagion consensus rule.\\ 
+The Tagion network architecture consist of a collections of computer nodes which are able to send messages between each other (A \bfit{computer node} is named \bfit{node} in this document). Each node can send a message to any other node in the network.
+
+The nodes in the network has different roles and the nodes will change roles over the lifetime depended controlled by the Tagion consensus rule. 
 
 The node roles are:
 \begin{itemize}
@@ -63,7 +62,7 @@ The node core program is implemented in the programming language D with some C a
 
 A Tagion Node is divided into units as shown in \cref{fig:node_service} and each unit handles a service function in the following manner:
 
-A smart-contract is sent to the Transaction-service-unit which are fetching the inputs date form the distributed Data-base DART unit (see \cref{sec:DART}) and verifying their signatures of the inputs. The DART-unit connects to other DARTs via the P2P-unit. The transaction-unit forwards the smart-contract to the Coordinator-unit and this information is gossiped to the network via the P2P-unit.\\
+A smart-contract is sent to the Transaction-service-unit which are fetching the inputs date form the distributed Data-base DART unit (see \cref{sec:DART}) and verifying their signatures of the inputs. The DART-unit connects to other DARTs via the P2P-unit. The transaction-unit forwards the smart-contract to the Coordinator-unit and this information is gossiped to the network via the P2P-unit.
 When the Coordinator receives an event with a smart-contract, the smart-contract contract is verified and executed via the \abbrev{TVM}{Tagion Virtual Machine} unit, and the results of the outputs are verified.\\
 The Coordinator adds it to an event in the Hashgraph and gossips the informations via the P2P-unit to other nodes in the network.    
 When the Coordinator finds an epoch, it make a list of ordered transactions and forwards this list to the Transcript-service-unit. The transcript-unit executes the smart-contracts in order and produces list called an Recorder. A Recorder contains list of DART instructs where the inputs will be removed and outputs added. The Coordinator sends the Recorder to the DART-uint which executes this list. The DART-unit forwards the Recorder to the Recorder-unit and the Recorder adds this to a block-chain.\\
@@ -86,28 +85,28 @@ Each of the services is running as independent tasks and communication between e
 
 \begin{itemize}
 	\item[\bfit{Coordinator}] This service manages the hashgraph-consensus and controls other related service for the node. 
-	The Coordinator generates and receives events and relays to the network. This service also generates the epoch and sends the information to the ScriptingEngine services.
+	The Coordinator generates and receives events and relays to the network. This service also generates the epoch and sends the information to the TVM services.
 	\item[\bfit{Transaction}] This service receives the incoming transaction script, validates, verifies and fetches the data from the DART and sends the information to the Coordinator.
 	\item[\bfit{DART}] Services to the Distributed-database
 	\item[\bfit{P2P}] This service handles the peer-to-peer communication protocol used to communicate between the nodes
 	\item[\bfit{TVM}] Handles the executions of the smart contracts
-	\item[\bfit{Transcript}] Services the Epoch and orders the script execution
+	\item[\bfit{Transcript}] Services the Epoch and orders the smart-contract execution
 	\item[\bfit{Recorder}] This services recorder this history of the DART.
 	\item[\bfit{Logger}] The service handles information logging for the different services
-	\item[\bfit{Monitor}] The Monitor service is used to graphical monitor the activities locally via a web interface.
+	\item[\bfit{Monitor}] The Monitor service is used to graphical the activities.
 \end{itemize}
 
 
 Estimated bandwidth requirement and the average propagation for a transaction the formulas in \cref{sec:gossip_model}.
  
-From simple experimental model result.\\
+From simple experimental model result.
 
 Example for a network with nodes $N=11$ an event size of $E_{size}=500bytes$ and network delay of $t_{net}=300ms$ the estimated epoch propagation delay
 and the bandwidth of:
 \begin{align*}
 n_{round} &= 2.2 \cdot ln(11) &\approx  5.27\\
 t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 5.5s \\
-B &= 500bytes \cdot 11^2 &= 60500bytes \\
+B &= 500bytes \cdot 11^2 &= 60.5kbytes \\
 BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 28kbit/s \\
 \end{align*}
 And with $N=31$:

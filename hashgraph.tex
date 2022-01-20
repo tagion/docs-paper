@@ -1,4 +1,5 @@
-\section{Hashgraph Consensus Mechanism} \label{sec:hashgraph_cm}
+\section{Hashgraph Consensus Mechanism} 
+\label{sec:hashgraph_cm}
 The Tagion network is based around a Hashgraph consensus algorithm and mathematical proof discovered by Leemon Baird \cite{SWIRLDS_HASHGRAPH}. This algorithm solves the Byzantine Generals’ Problem of generating a consensus order list of actions between distributed computer nodes connected in a network.
 If more than 2/3 of the nodes follows the same consensus rules, all the nodes will, in finite time, reach the same order of events.
 The network distributes the information via a gossip protocol, sending information about the data received from the other nodes in the network. All the nodes solving the Hashgraph algorithm will come to the same order of transactions.
@@ -11,8 +12,7 @@ In \cref{fig:wavefront} below shows a Hashgraph of gossip information representi
  \includegraphics[width=0.7\textwidth]{fig/wavefront_and_order_long.eps}
 % \includegraphics[width=0.45\textwidth]{fig/wavefront_and_order_small_no_alt.eps}
  % wavefront_and_order.eps: 3358x4625 px, 300dpi, 28.43x39.16 cm, bb=0 0 806 1110
- %\caption{Hashgraph with altitude(A) and parameter $\Omega$}
- \caption{Hashgraph with parameter $\Omega$}
+ \caption{Hashgraph with altitude(A) and order parameter $\Omega$}
  \label{fig:wavefront}
 \end{figure}
 
