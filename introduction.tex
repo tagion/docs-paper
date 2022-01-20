@@ -36,8 +36,8 @@ The Hashgraph algorithm is asynchronous byzantine fault tolerant meaning that if
 The mechanical node swapping described in \cref{sec:network_architecture} describes this swapping of nodes, which is \bfit{UDR} random. Static calculation based on different number of Active and Available Nodes are available.
 The probability of an coordinated attack to take over the network can be estimated from \cref{sec:network}.\\
 
-Example if number of active nodes $N=31$ and total nodes $M=200$ and the attacker nodes $E=100$.
-Probability that a coordinated attack can prevent the network from reaching a consensus is less than $6.7 \cdot 10^{-12}$.
+Example if number of active nodes $N=31$ and total nodes $M=201$ and the attacker nodes $E=31$.
+Probability that a coordinated attack can prevent the network from reaching a consensus is less than $6.9 \cdot 10^{-14}$.
 
 \subsection{Node Architecture}
 The node core program is implemented in the programming language D with some C and Go libraries for crypto, network and virtual engine functions. It is structured, as shown in the figure below. 
