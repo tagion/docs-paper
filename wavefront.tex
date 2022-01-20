@@ -1,9 +1,9 @@
-\subsection{Gossip protocol and Wavefront propagation}
+\subsection{Gossip protocol and Wavefront propagation}\label{sec:wavefront}
 The Hashgraph algorithm uses a gossip protocol called “gossip about gossip” to propagate information between the nodes. It means node A sends all the information of the communication that it knows to a randomly selected node B. This enables node B to construct the same Hashgraph as node A. (Patent \cite{wavefront_patent})
 
 In the Tagion network, a protocol called Wavefront is used to exchange information between two nodes, ensuring that node A and B only need to communicate three times to share the state of the graph.
 Each node keeps track of an integer value called Altitude. Altitude is increased by one for each event created by the node. Each node stores its current view of Altitude for each node in the network.
-By exchanging information about the Altitude between two nodes, both can figure out if their altitude is higher and send a list of events which are in front. The information of altitudes is called an wavefront.\\ 
+By exchanging information about the Altitude between two nodes, both can figure out if their altitude is higher and send a list of events which are in front. The information of altitudes is called an wavefront.
 
 The Wavefront information exchange has four states:
 \begin{enumerate}

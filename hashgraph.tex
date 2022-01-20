@@ -4,8 +4,6 @@ The Tagion network is based around a Hashgraph consensus algorithm and mathemati
 If more than 2/3 of the nodes follows the same consensus rules, all the nodes will, in finite time, reach the same order of events.
 The network distributes the information via a gossip protocol, sending information about the data received from the other nodes in the network. All the nodes solving the Hashgraph algorithm will come to the same order of transactions.
 In \cref{fig:wavefront} below shows a Hashgraph of gossip information representing the information flow between network nodes. In finite time all nodes in the network will be able to build the same Hashgraph of gossip information.
-
-
 \begin{figure}[ht]
  \centering
  % Replace this when we get the wavefront in
@@ -19,9 +17,7 @@ In \cref{fig:wavefront} below shows a Hashgraph of gossip information representi
 % Hashgraph with altitude (A) order parameter Ω is shown. 
 Each vertical line represents a compute node and each circle an event. The line between the events represents the communication of the events between the nodes. 
 The events coloured red define a witness that is used to divide the consensus into rounds. Each round decides a list of events to be collected. This list of events is called an epoch and must be sorted into the same order as all other nodes. The description of the Hashgraph algorithm can be found in \cite{SWIRLDS_HASHGRAPH}.
-
 \pagebreak
-
 \input{wavefront}
 
 \pagebreak

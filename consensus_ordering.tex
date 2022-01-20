@@ -1,12 +1,10 @@
-\subsection{Consensus Ordering}
-In the Tagion implementation of the Hashgraph algorithm, an Event is only allowed to point to one or none ``other parent'' which is called a ``father-event'' as shown om \cref{fig:consensus_order}. This strategy aids in solving the graph forking problem and simplifies the consensus ordering.\\
+\subsection{Consensus Ordering}\label{sec:consensus_ordering}
+In the Tagion implementation of the Hashgraph algorithm, an Event is only allowed to point to one or none ``other parent'' which is called a ``father-event'' as shown om \cref{fig:consensus_order}. This strategy aids in solving the graph forking problem and simplifies the consensus ordering.
 The ``self-parent'' is defined as a ``mother-event'' in the Tagion implementation. An event must have a mother-event but doesn't have to have a father-event.
 
-Each event points to the previous event called the mother-event, and some also point to another father-event. The mother-event is defined as the previous event from the same node. The father is an event sent via the gossip network from another node. \\
+Each event points to the previous event called the mother-event, and some also point to another father-event. The mother-event is defined as the previous event from the same node. The father is an event sent via the gossip network from another node. 
 
 The order $\Omega$ is calculated as:
-
-%\end{equation}
 \begin{equation}
  \Omega_{B,k+1} = max \big(\Omega_{A,k} , \Omega_{B,k} \big) +1
 \end{equation}
@@ -42,7 +40,7 @@ H (    {h}_{A} \parallel {h}_{B} )  < H (    {h}_{B} \parallel {h}_{A} ) &
 
 
 
-If parameter $l(A,B)$ is $'true'$ if event A is ordered before event B (see \cref{sec:)
+If parameter $l(A,B)$ is $'true'$ if event A is ordered before event B (see \cref{sec:order_function}).
 
 \begin{figure}[H]
  \centering
