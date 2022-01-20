@@ -1,17 +1,17 @@
 \section{Introduction}
 This document describes the Tagion core network.\\
-The tagion core network includes the byzantine consensus algorithm, the consensus database and description of node validators and the basic node selections.
-\subsection{Network Architecture}
+The Tagion core network includes a byzantine consensus algorithm, a distributed database (DART) with consensus and description of node validators and the basic node selections.
+\subsection{Network Architecture} \label{sec:network_architecture}
 The Tagion network architecture consist of a collections of computer nodes which are able to send messages between each other (A \bfit{computer node} is named \bfit{node} in this document). Each node can send a message to any other node in the network.
 
-The nodes in the network has different roles and the nodes will change roles over the lifetime depended controlled by the Tagion consensus rule. 
+The nodes in the network has different roles and the nodes will change roles over the lifetime depended controlled by the Tagion consensus rules. 
 
 The node roles are:
 \begin{itemize}
-	\item[\bfit{Active Node}] The node in this role category takes care of the validations and consensus.
+	\item[\bfit{Active Node}] A Node in this role category takes care of the validations and consensus.
 	\item[\bfit{Standby Node}] A node waiting to be selected as an active node.
-	\item[\bfit{Swap Node}] A node to be swapped with an \bfit{Active Node} and become a validator.  
-	\item[\bfit{Prospect Node}] Nodes in this category are waiting to become and 'real' node in the network 
+	\item[\bfit{Swap Node}] A node selected to become an active node waiting to be swapped with an \bfit{Active Node}.  
+	\item[\bfit{Prospect Node}] A node in this category is waiting to become and 'real' node in the network.  
 	\label{tab:node_roles}
 \end{itemize}
 
@@ -26,9 +26,19 @@ All the nodes communicates via protocol call libp2p \cite{libp2p}. The role of t
 	\label{fig:network_architecture}
 \end{figure}
 
-The \bfit{Active Node}'s validates the transaction and used the Hashgraph algorithm \cref{sec:hashgraph_cm} to reach consensus. The Hashgraph algorithm is capable of producing a consensus ordered list of transaction (Defined as \bfit{transaction list}). This means that all the \bfit{Active Node}'s will produces the same order of transactions.\\
+The \bfit{Active Node}'s validates a transaction and use the Hashgraph algorithm \cref{sec:hashgraph_cm} to reach consensus. The Hashgraph algorithm is capable of producing a consensus ordered list of transaction (Defined as \bfit{transaction list}). This means that all the \bfit{Active Node}'s will produces the same order of transactions.\\
 The transaction list is execution in the consensus order \cref{sec:network}.
- 
+
+\subsection{Network security}
+
+The Hashgraph algorithm is asynchronous byzantine fault tolerant meaning that if more than 2/3 of the actors are not evil (following protocol) then the network will reach consensus. If more than 1/3 and less than 2/3 of the network actors are not evil, then the network cannot reach consensus. If more than 2/3 then the network has been taken over meaning new protocols has been enforced by the majority potentially destroying data integrity. 
+
+The mechanical node swapping described in \cref{sec:network_architecture} describes this swapping of nodes, which is \bfit{UDR} random. Static calculation based on different number of Active and Available Nodes are available.
+The probability of an coordinated attack to take over the network can be estimated from \cref{sec:network}.\\
+
+Example if number of active nodes $N=31$ and total nodes $M=200$ and the attacker nodes $E=100$.
+Probability that a coordinated attack can prevent the network from reaching a consensus is less than $1.3 \cdot 10^{-13}$.
+
 \subsection{Node Architecture}
 The node core program is implemented in the programming language D with some C and Go libraries for crypto, network and virtual engine functions. It is structured, as shown in the figure below. 
 

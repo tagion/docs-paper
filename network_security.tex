@@ -55,7 +55,7 @@ A network is defined to be evil if the network contains $n_E$ or more evil nodes
 
 The probability that $n_E$ nodes out of $N$ nodes are:
 \begin{equation}
- p_{E_n} = \left. \prod_{i=0}^{n_E-1}{p_{E_i}} \cdot \prod_{i=n_E}^{N_E}{(1-p_{E_i}) \cdot C(N,n_E)} \right| _{N_E = min(E,N)}
+ p_{n_E} = \left. {p_{E_i}^{n_E}} \cdot {(1-p_{E_i})^{N_E-n_E} \cdot C(N,n_E)} \right| _{N_E = min(E,N)}
 \end{equation}
 
 
@@ -66,26 +66,30 @@ If $M \gg n_E$  and $E \gg n_E$  the probability can be approximated to:
 
 The probability that $n_E$ nodes or more are:
 \begin{equation}
- p_{n>n_E} = \left. \sum_{i=N_E}{n_E}{p_i \cdot C(N,i)} \right|_{N_E = min(E,N)}
+ p_{n>n_E} = \left. \sum_{i=n_E}^{N_E}{p_{iE} } \right|_{N_E = min(E,N)}
 \end{equation}
 
 
 Example if $N=100$ and $M=1000$ and the attacker has $E$ nodes, the probability that the attacker can prevent the network from reaching a consensus is:
 \begin{align*}
- M &= 200 & M &= 1000 & M &= 10000 \\
- N &= 60 & N &= 100 & N &= 100 \\
- E &= 60 & E &= 100 & E &= 500 \\
- n_E &= 21 & n_E &= 34 & n_E &= 34 \\
- p_{n \ge 20 } &= 0.199261 & p_{n \ge 34} &= 1.62609 \cdot 10^{-12} & p_{n \ge 34} &= 5.24507 \cdot 10^{-20}
+ M &= 31 & M &= 200 & M &= 1001 \\
+ N &= 11 & N &= 31 & N &= 101 \\
+ E &= 11 & E &= 100 & E &= 101 \\
+ n_E &= 4 & n_E &= 11 & n_E &= 34 \\
+ p_{n \ge 4} &= 4.1^{-5} & 
+ p_{n \ge 11} &= 1.37 \cdot 10^{-13} & 
+ p_{n \ge 34} &= 7.36 \cdot 10^{-67}
 \end{align*}
 
 For an attacker to take over the network:
 \begin{align*}
- M &= 200 & M &= 1000 & M &= 10000 \\
- N &= 60 & N &= 100 & N &= 100 \\
- E &= 60 & E &= 100 & E &= 500 \\
- n_E &= 41 & n_E &= 67 & n_E &= 67 \\
- p_{n \ge 41 } &= 4.2687 \cdot 10^{-14} & p_{n \ge 67} &= 9.34035 \cdot 10^{-54} & p_{n \ge 67} &= 5.68532 \cdot 10^{-64}
+ M &= 31 & M &= 200 & M &= 1001 \\
+ N &= 11 & N &= 31 & N &= 101 \\
+ E &= 11 & E &= 100 & E &= 101 \\
+ n_E &= 4 & n_E &= 21 & n_E &= 68 \\
+ p_{n \ge 4 } &= 1.36 \cdot 10^{-13} & 
+ p_{n \ge 21} &= 9.34035 \cdot 10^{-54} & 
+ p_{n \ge 68} &= 7.2 \cdot 10^{-125}
 \end{align*}
 
 
