@@ -16,9 +16,12 @@ struct Attack {
     }
 
     double pG(const uint n, const uint e) const nothrow pure {
-        assert(e<=E);
+        if (e <- E) {
+//        assert(e<=E);
 //        return double(M-(E-e)-n)/double(M-n);
-        return 1-double(E-e)/double(M-n);
+            return 1-double(E-e)/double(M-n);
+        }
+        return 1;
     }
 
     double pnE(const uint nE) const  {
@@ -78,7 +81,7 @@ struct Attack {
 }
 
 int main(string[] args) {
-    const M=201;
+    const M=101;
     const N=31;
     const E=31;
     auto attack=Attack(M, N, E);

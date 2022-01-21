@@ -36,8 +36,43 @@ The Hashgraph algorithm is asynchronous byzantine fault tolerant meaning that if
 The mechanical node swapping described in \cref{sec:network_architecture} describes this swapping of nodes, which is \bfit{UDR} random. Static calculation based on different number of Active and Available Nodes are available.
 The probability of an coordinated attack to take over the network can be estimated from \cref{sec:network}.\\
 
-Example if number of active nodes $N=31$ and total nodes $M=201$ and the attacker nodes $E=31$.
-Probability that a coordinated attack can prevent the network from reaching a consensus is less than $6.9 \cdot 10^{-14}$.
+Different censorious for an attack probability has been estimated in the calculation show in \cref{tab:network_attack}.
+The probability numbers in column "Halt" represents the probability of the network to halt/slowdown and the column "Take-over" represents the probability for that the Evil nodes can coordinate an attack.
+From numbers it can be seen that the network get more robust against attack when the ration between total nodes and evil and active nodes. 
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|p{2.2cm}|p{2.2cm}|p{2.4cm}|p{2.4cm}|p{2.4cm}|}
+			\hline
+			Active Nodes $N$ & Evil Nodes $E$ & Total Nodes $M$ & Halt $p_{1/3}$ & Take-over $p_{2/3}$ \\
+			\hline
+			31 & 31 & 101 & $0.23$ & $1.7 \cdot 10^{-7}$ \\
+			\hline
+			31 & 31 & 301 & $4.5 \cdot 10^{-5}$ & $1.2 \cdot 10^{-17}$ \\
+			\hline
+			31 & 31 & 501 & $2.8 \cdot 10^{-7}$ & $2.5 \cdot 10^{-17}$ \\
+			\hline
+			37 & 31 & 101 & $0.2 $ & $1.4 \cdot 10^{-9}$ \\
+			\hline
+			43 & 31 & 101 & $0.21 $ & $1.4 \cdot 10^{-12}$ \\
+			\hline
+			43 & 31 & 301 & $1.1 \cdot 10^{-6} $ & $1.5 \cdot 10^{-27}$ \\
+			\hline
+			43 & 31 & 501 & $1.1 \cdot 10^{-10} $ & $3.5 \cdot 10^{-34}$ \\
+			\hline
+			31 & 43 & 501 & $1.2 \cdot 10^{-5} $ & $4.5 \cdot 10^{-18}$ \\
+			\hline
+			31 & 61 & 501 & $3.9 \cdot 10^{-4} $ & $3.8 \cdot 10^{-14}$ \\
+			\hline
+			31 & 61 & 1001 & $5.4 \cdot 10^{-7} $ & $2.1 \cdot 10^{-20}$ \\
+			\hline
+			31 & 61 & 10001 & $1.2 \cdot 10^{-17} $ & $2.6 \cdot 10^{-41}$ \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Probability of an attack versus nodes} 
+	\label{tab:network_attack}
+\end{table}
 
 \subsection{Node Architecture}
 The node core program is implemented in the programming language D with some C and Go libraries for crypto, network and virtual engine functions. It is structured, as shown in the figure below. 
