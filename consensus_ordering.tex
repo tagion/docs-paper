@@ -9,7 +9,8 @@ The order $\Omega$ is calculated as:
  \Omega_{B,k+1} = max \big(\Omega_{A,k} , \Omega_{B,k} \big) +1
 \end{equation}
 
-The events in the epoch list are sorted by the order $\Omega$. If the order of two events is equal, the hash $h$ of the event is used to calculate the order.
+The events in an epoch list are sorted by the order $\Omega$. According to \cref{equ:order} which define if an event A must be ordered before a B event. If the order of two events is equal, then the nested function $l'$ \cref{equ:nested_order} is use to decided the order.\\
+A event is defined to be fatherless if the lineage of an event don't have a father back to the Eva event, and an Eva-event is defined to be an event without a mother and/or a father.
 The following expression is used to order the events:
 
 \begin{align}
@@ -25,22 +26,26 @@ The following expression is used to order the events:
 \begin{align}
 {l'}(A,B) & = 
 \begin{cases}
-{l}(A_{mother},B_{mother}) &  	
-\text{if}  ~ (\text{A has a mother} ~ \&  ~ \text{B has a mother}) \\ 
 {l}(A_{father},B_{father}) &  	
 \text{if}  ~ (\text{A has a father} ~ \&  ~ \text{B has a father}) \\ 
+{l}(A_{father},B_{mother}) &  	
+\text{if}  ~ (\text{A has a father} ~ \&  ~ \text{B has a mother}) \\ 
+{l}(A_{mother},B_{father}) &  	
+\text{if}  ~ (\text{A has a mother} ~ \&  ~ \text{B has a father}) \\ 
+{l}(A_{mother},B_{mother}) &  	
+\text{if}  ~ (\text{A is not fatherless} ~ \&  ~ \text{B is not fatherless}) \\ 
 0 &  	
-\text{if}  ~ (\text{A has a no father}) \\ 
+\text{if}  ~ (\text{A is not fatherless}) \\ 
 1 &  	
-\text{if}  ~ (\text{B has a father}) \\ 
-H (    {h}_{A} \parallel {h}_{B} )  < H (    {h}_{B} \parallel {h}_{A} ) & 
-\text{otherwise}
+\text{if}  ~ (\text{B is not fatherless}) \\ 
+{h}_{A} < {h}_{B} & 
+\text{otherwise (Only happens for none orderd event)}
 \end{cases} 
+\label{equ:nested_order}    
 \end{align}
-
-
-
 If parameter $l(A,B)$ is $'true'$ if event A is ordered before event B (see \cref{sec:order_function}).
+
+Note. An event which are fatherless is not allowed to contain a payload and an node must have participated in producing one epoch before the payload can be considered valid. 
 
 \begin{figure}[H]
  \centering

@@ -151,14 +151,14 @@ and the bandwidth of:
 \begin{align*}
 n_{round} &= 2.2 \cdot ln(11) &\approx  5.27\\
 t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 5.5s \\
-B &= 500bytes \cdot 11^2 &= 60.5kbytes \\
+B &= 500bytes \cdot 11^2 & \approx 60.5kbytes \\
 BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 28kbit/s \\
 \end{align*}
 And with $N=31$:
 \begin{align*}
 n_{round} &= 2.2 \cdot ln(31) & \approx  8.6\\
 t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 8s \\
-B &= 500bytes \cdot 101^2 & \approx 481kbytes \\
+B &= 500bytes \cdot 31^2 & \approx 481kbytes \\
 BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 152kbit/s \\
 \end{align*}
 And with $N=101$:
@@ -166,13 +166,13 @@ And with $N=101$:
 n_{round} &= 2.2 \cdot ln(101) & \approx  10.15\\
 t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 10.6s \\
 B &= 500bytes \cdot 101^2 & \approx 5.1Mbytes \\
-BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 1.2Mbit/s \\
+BW &= 8 \cdot B / (n_{round}\cdot 300ms) & \approx 1.2Mbit/s \\
 \end{align*}
 And with $N=1001$:
 \begin{align*}
-n_{round} &= 2.2 \cdot ln(11) & \approx  15\\
+n_{round} &= 2.2 \cdot ln(1001) & \approx  15\\
 t_{epoch} &= 3.5 \cdot n_{round} \cdot 300ms & \approx 16s \\
-B &= 500bytes \cdot 1001^2 & 501Mbytes \\
+B &= 500bytes \cdot 1001^2 & \approx 501Mbytes \\
 BW &= 8 \cdot B / (n_{round}\cdot 300ms) &\approx 80Mbit/s \\
 \end{align*}
 

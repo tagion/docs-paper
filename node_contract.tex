@@ -8,7 +8,7 @@
       \hline
       Parameter & Description & Type & Access \\
       \hline
-      $\$type$ & Set contract type to 'NNR' &  \texttt{string} & \texttt{ro} \\
+      $\$@$ & Set contract type to 'NNR' &  \texttt{string} & \texttt{ro} \\
       \hline
       $\#node$ & Public key for the node &  \texttt{ubyte[]} & \texttt{ro} \\
       \hline
@@ -26,4 +26,23 @@
 \end{center}
 \caption{NNR Network Node Record} 
 \label{tab:node_record}
+\end{table}
+
+\subsection{Hash Lock Record}
+This record is used to store the has of an full-hash-value of the record with a $\#'param'$ to secure that the Merkle root of the DART.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|l|p{7cm}|p{1.5cm}|l|}
+			\hline
+			Parameter & Description & Type & Access \\
+			\hline
+			$\$@$ & Sets the contract type to 'HL' &  \texttt{string} & \texttt{ro} \\
+			\hline
+			$\$lock$ & Raw hash value of full $\#$ record  & \texttt{ubyte[]} & \texttt{ro} \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{HL Hash Lock} 
+	\label{tab:hl}
 \end{table}
