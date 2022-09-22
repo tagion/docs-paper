@@ -1,0 +1,69 @@
+\section{No central key-pair re-generation}
+
+Idea to recover key-pair from lost password.
+When key-pair is generated the first time the key owner will answer a number of questions. If we have $N$ number of questions $q_k$ and related to $a_k$  answers.
+A seed hash $R$ of a random number is generated which will be used as the seed key for the private key.
+A new seed $Y_a$ can be generated \footnote{The operator $\otimes$ represents bit exclusive or operator} from $R$ and a list of answers hashes of answers.
+
+
+
+%\begin{equation}
+\begin{align}
+ A_i = H(H(a_i)||H(q_i)) \\
+ Y_a = R \otimes H( A'_a )
+ \end{align}
+%\end{equation}
+The seed hash $R$ can be regenerated if all the values of $A$ is available.
+\begin{equation}
+R = Y_a \otimes H( A'_a )
+\end{equation}
+Accumulated exclusive or (excluding the a'th element) is define as: 
+\begin{align}
+A'_a = \sum^{\otimes}_{i \neq a}{A_i} 
+\end{align}
+Example:
+\begin{align}
+A'_2 = \sum^{\otimes}_{i \neq 2}{A_i} = A_0 \otimes A_1 \otimes A_3 ... 
+\end{align}
+
+
+
+If the password recovery values $Y$ and the questions $q_k$ is stored so that the owner can access those value, which is now named recovery service.
+The owner creates a passphrase $p$ for this a new a seed phrase is generated.
+
+%\begin{equation}
+ \begin{align}
+   P_u = H(U \parallel H(p)) \\
+   Y_u = R \otimes P_u \otimes D_u \\
+   R = Y_u \otimes P_u \otimes D_u
+ \end{align}
+%\end{equation}
+
+To obfuscate the passphrase a hash $U$ of a random number and a device seed $D_u$ stored on the local device. This will scramble a simple password and the value $Y_u$ is stored in the recovery service.
+
+If the key-pair owner forgets the password $p$ then the owner can request the questions $q_k$ from the recovery service and generated the value $A$ and drive the value $R$. This can be done without been connected to the server.
+
+To validate that the $R$ is correct a hash $S$ of $R$ are is stored on the recovery server.
+
+%\begin{equation}
+ \begin{align}
+  S = H(R)
+ \end{align}
+%\end{equation}
+
+A set of questions can be generated to together with a set of answers and a list of corresponding seed Y can be generated. This way the owner only need to answer $M$ out of $N$ questions and by comparing the hash of $R$ the with the compilation of $A$ and $Y$ values the right combination can be found.
+
+The number of Y values need is:
+
+\begin{equation}
+  N_Y = (M-N) \cdot N + 1
+\end{equation}
+
+Ex. If $M=10$ and $N=5$ will result in a $N_Y$ of $26$.\\
+
+
+Of cause it's not recommend to have a high ration between $M$ and $N$ because this can lead to high probability of guessing $R$.
+
+
+
+

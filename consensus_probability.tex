@@ -1,0 +1,74 @@
+\section{Gossip Model}\label{sec:gossip_model}
+
+\paragraph{Epoch consensus\\}
+
+In the following the probability for the Hashgraph-algorithm to reach an Epoch consensus within $H$ events consecutive is estimated in a simple model as follows.\\
+
+To estimate the bandwidth and the propagation delay simple simulation model has been implemented. 
+The network participants are given by the flowing parameters.
+\begin{itemize}
+	\item[$H$] is the number of event for a node to reach Epoch-consensus.
+	\item[$M$] is the total number of nodes which are available for the network (This includes active and passive nodes, not prospect nodes). 
+	\item[$n$] is the number of nodes which has not yet been seen by the current node. 
+\end{itemize}
+
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|l|p{4cm}|p{3cm}|}
+			\hline
+			Nodes $N$ & Round Factor $n_{round}$ & Bandwidth-Scale $B$ \\
+			\hline
+			11 & 5 & 171 \\
+			\hline
+			31 & 8 & 1396 \\
+			\hline
+			101 & 12 & 14918 \\
+			\hline
+			1001 & 16 & 1498538 \\
+			\hline
+			10001 & 20 & 149868334 \\
+			\hline
+			100001 & 24 & 14996214212 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Gossip simulation model} 
+	\label{tab:gossip_model}
+\end{table}
+
+From the simulation the following expression can be driven.
+The average events per round: 
+\begin{equation}
+n_{round} = 2.2 \cdot ln(N) 
+\end{equation}
+The average estimated time between epochs: 
+
+\begin{equation}
+t_{epoch} = K \cdot n_{round} \cdot t_{net}
+\end{equation}
+Whe the following is defined as:
+\begin{itemize}
+	\item[$N$] is the number of active nodes running the networks. 
+	\item[$K$] is the epoch scaling factor (Typical value of $K$ is typical a little larger than 3)
+	\item[$n_{round}$] is the average events for between round. 
+	\item[$t_{net}$] is the network delay. 
+	\item[$t_{epoch}$] is the average propagation delay per transaction. 
+\end{itemize}
+
+
+Estimated bandwidth scale-factor:
+\begin{equation}
+B = E_{size} \cdot N^2
+\end{equation}
+
+Estimated bandwidth requirement:
+\begin{equation}
+BW = \frac{B}{n_{round\cdot t_{net}}}
+\end{equation}
+
+\begin{itemize}
+	\item[$B$] is the average bandwidth scale factor used by a node.
+	\item[$E_{size}$] is the average memory size of an event including transaction data. 
+	\item[$BW$] is the average bandwidth used by a node.
+\end{itemize}

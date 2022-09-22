@@ -1,6 +1,6 @@
 \section{Distributed Database (DART)}\label{sec:DART}
 
-\abbrev{DART}{Distributed Archive of Random Transactions}
+\abbrev{DART}{Distributed Archive of Random Transactions} [Patent \cite{dart_patent}]
  is built to store and keep track of transactions in the Tagion network. The database efficiently handles the removal and addition of transactions in a secure and distributed manner.
 Each transaction is stored in a distributed hash-table using a cryptographic hash of the transaction T data. Each transaction is identified by a unique hash value h. The transaction is put into a table ordered by the numerical value of the hash.
 \begin{equation}
@@ -42,12 +42,12 @@ The Bull's eye value is stored in a hash-linked chain of blocks where each block
  \includegraphics[width=1.0\textwidth]{fig/dart_tree_bw.eps}
  % dart_bw.eps: 17766x12625 px, 300dpi, 150.42x106.89 cm, bb=0 0 4264 3030
  \caption{The data structural layout of DART database}
- \label{fig:dart}
+ \label{fig:dartsector}
 \end{figure}
 
 
 
-\subsection{Sparse Merkle Tree}
+\subsection{Sparse Merkle Tree}\label{sec:SMT}
 The data in a section is mapped using a \abbrev{SMT}{Sparse Merkle Tree} which makes it efficient to add into and remove archives from the Merkle tree. \\
 The hash point into the DART is divided by rims. Rim zero is the most significant byte (MSB) of the hash fingerprint of the archive. Rim one is the next byte in the hash etc. \\
 In the current implementation of the DART, the first two rims are used as the section index. Thus the DART has a total number of indices $2^{16} = 65536$ which is equivalent to the two bytes unsigned number. \\
@@ -55,8 +55,13 @@ Each section stores the archive in a hash table. An SMT is used as a look-up tab
 As a comparison, a traditional Merkle tree with $2^{24} = 8^3 \approx 16 \cdot 10^{6}$ Archives. Calculating a full Merkle tree requires the calculation of around $32 \cdot 10^6$ hashes. By contrast, using an SMT with $16 \cdot 10^{6}$  archives mean just around 2000 hashes have to be calculated.
 
 \paragraph{Core protocol updates\\} 
-The DART will be used for protocol updates by the following consensus. One or more nodes will need to run the new protocol update in a parallel DART containing the same transaction information as the current accepted DART. The new DART will have a new Bull's eye, and this will result in a fork of the Bull's eye chain. When the majority of the nodes run the newly upgraded nodes, they can decide to drop support for the old DART and run the new DART. When enough nodes stop running the old DART, it will not be able to reach a consensus, and the upgrade has completed.
+The DART will be used for protocol updates by the following consensus. One or more nodes will need to run the new protocol update in a parallel DART containing the same transaction information as the current accepted DART. The new DART will have a new Bull's eye \abbrev{Bullseye}{DART Merkle Root}, and this will result in a fork of the Bull's eye chain. When the majority of the nodes run the newly upgraded nodes, they can decide to drop support for the old DART and run the new DART. When enough nodes stop running the old DART, it will not be able to reach a consensus, and the upgrade has completed.
 
 \paragraph{DART garbage collection\\} 
 A garbage collection script will run every (G) epoch and remove all the bills which are older than a specified date. Bills that have not been used for a long period will be burned, which ensures that the system does not contain dead bills/money.
 It is the owner's responsibility to recycle their bills before the expiry date.
+
+
+\paragraph{Unpredictable Deterministic Random\\}
+The merkle root \bfit{Bullseye} is used as seed for the \abbrev{UDR}{Unpredictable Deterministic Random}, which is used in the different algorithmic consensus for the network.
+ 

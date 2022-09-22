@@ -1,30 +1,51 @@
-\subsection{Consensus Ordering}
-In the Tagion implementation of the Hashgraph algorithm, an Event is only allowed to point to one or none ``other parent'' which is called a ``father-event'' as shown om \cref{fig:consensus_order}. This strategy aids in solving the graph forking problem and simplifies the consensus ordering.\\
+\subsection{Consensus Ordering}\label{sec:consensus_ordering}
+In the Tagion implementation of the Hashgraph algorithm, an Event is only allowed to point to one or none ``other parent'' which is called a ``father-event'' as shown om \cref{fig:consensus_order}. This strategy aids in solving the graph forking problem and simplifies the consensus ordering.
 The ``self-parent'' is defined as a ``mother-event'' in the Tagion implementation. An event must have a mother-event but doesn't have to have a father-event.
 
-Each event points to the previous event called the mother-event, and some also point to another father-event. The mother-event is defined as the previous event from the same node. The father is an event sent via the gossip network from another node. \\
+Each event points to the previous event called the mother-event, and some also point to another father-event. The mother-event is defined as the previous event from the same node. The father is an event sent via the gossip network from another node. 
 
 The order $\Omega$ is calculated as:
-
-%\end{equation}
 \begin{equation}
  \Omega_{B,k+1} = max \big(\Omega_{A,k} , \Omega_{B,k} \big) +1
 \end{equation}
 
-The events in the epoch list are sorted by the order $\Omega$. If the order of two events is equal, the hash $h$ of the event is used to calculate the order.
+The events in an epoch list are sorted by the order $\Omega$. According to \cref{equ:order} which define if an event A must be ordered before a B event. If the order of two events is equal, then the nested function $l'$ \cref{equ:nested_order} is use to decided the order.\\
+A event is defined to be fatherless if the lineage of an event don't have a father back to the Eva event, and an Eva-event is defined to be an event without a mother and/or a father.
 The following expression is used to order the events:
 
-\begin{equation}
- {l}_{A,B} = 
+\begin{align}
+ {l}(A,B) & = 
     \begin{cases}
+         {l'}(A,B) &  	\text{if}  ~ ({\Omega}_{A} = {\Omega}_{B} )  \\ 
         {{\Omega}_{A} < {\Omega}_{B}} & 
-        \text{if}  ~ ({\Omega}_{A} \neq {\Omega}_{B} )  \\ 
-        H (    {h}_{A} \parallel {h}_{B} )  < H (    {h}_{B} \parallel {h}_{A} ) & 
         \text{otherwise}
-    \end{cases}
-\end{equation}
+    \end{cases} 
+    \label{equ:order}    
+\end{align}
 
-The parameter ${l}_{A,B}$ is $'true'$ if event A is ordered before event B.
+\begin{align}
+{l'}(A,B) & = 
+\begin{cases}
+{l}(A_{father},B_{father}) &  	
+\text{if}  ~ (\text{A has a father} ~ \&  ~ \text{B has a father}) \\ 
+{l}(A_{father},B_{mother}) &  	
+\text{if}  ~ (\text{A has a father} ~ \&  ~ \text{B has a mother}) \\ 
+{l}(A_{mother},B_{father}) &  	
+\text{if}  ~ (\text{A has a mother} ~ \&  ~ \text{B has a father}) \\ 
+{l}(A_{mother},B_{mother}) &  	
+\text{if}  ~ (\text{A is not fatherless} ~ \&  ~ \text{B is not fatherless}) \\ 
+0 &  	
+\text{if}  ~ (\text{A is not fatherless}) \\ 
+1 &  	
+\text{if}  ~ (\text{B is not fatherless}) \\ 
+{h}_{A} < {h}_{B} & 
+\text{otherwise (Only happens for none orderd event)}
+\end{cases} 
+\label{equ:nested_order}    
+\end{align}
+If parameter $l(A,B)$ is $'true'$ if event A is ordered before event B (see \cref{sec:order_function}).
+
+Note. An event which are fatherless is not allowed to contain a payload and an node must have participated in producing one epoch before the payload can be considered valid. 
 
 \begin{figure}[H]
  \centering

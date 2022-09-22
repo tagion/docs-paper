@@ -24,7 +24,8 @@ If the evil attacker wants to take over the network, the attacker needs more tha
 
 
 The calculated scenario is based on all the $N$ nodes being changed at every epoch. In the real network, this is not the case; only one node is swapped out and in at every $100$ epoch. Thus the probability of an evil takeover is significantly lower than this calculation. The model is chosen because it is easy to express mathematically. 
-The active nodes are selected randomly from $M$, and the probability that the evil attacker controls the first selected node is:
+The active nodes are selected randomly from $M$, and the probability that the evil attacker controls the first selected node is:\\
+
 Definition of permutation formula:
 \begin{equation}
  P(n,r) = \frac{n!}{(n-r)!}
@@ -45,8 +46,9 @@ The probability of selecting an evil node after selecting an evil node at the nt
 \begin{equation}
  p_{E_n} = \frac{E-n}{M-n}
 \end{equation}
-
-
+\begin{equation}
+p_{G_{n,e}} = 1-\frac{E-e}{M-n}
+\end{equation}
 The probability of constructing an evil network\\
 In this section, the probability of constructing an evil network is calculated.\\
 The network is randomly constructed by selecting $N$ nodes out of $M$ nodes where $E$ nodes are evil.\\
@@ -54,74 +56,84 @@ A network is defined to be evil if the network contains $n_E$ or more evil nodes
 
 The probability that $n_E$ nodes out of $N$ nodes are:
 \begin{equation}
- p_{E_n} = \left. \prod_{i=0}^{n_E-1}{p_{E_i}} \cdot \prod_{i=n_E}^{N_E}{(1-p_{E_i}) \cdot C(N,n_E)} \right| _{N_E = min(E,N)}
+ p_{n_E} \leq \left. \prod_{i=0}^{n_E-1}{p_{E_i}} \cdot 
+ \prod_{i=n_E}^{N_E}
+ {p_{G_{i,n_E}} \cdot C(N,n_E)} \right| _{N_E = min(E,N)}
 \end{equation}
 
 
 If $M \gg n_E$  and $E \gg n_E$  the probability can be approximated to:
 \begin{equation}
- p_{n_E} \approx p_{E_0}^{n_E} \cdot (1-p_{E_0})^{N-n_E} \cdot C(N,n_E) ~ \text{for} ~ \frac{E}{M} \approx \frac{E-n_E}{M-n_E}
+ p_{n_E} \approx p_{E_0}^{n_E} \cdot (1-p_{E_0})^{N-n_E} \cdot C(N,n_E) ~ \text{for} ~ \frac{E-n_E}{M} \approx \frac{E-n_E}{M-n_E}
 \end{equation}
 
 The probability that $n_E$ nodes or more are:
 \begin{equation}
- p_{n>n_E} = \left. \sum_{i=N_E}{n_E}{p_i \cdot C(N,i)} \right|_{N_E = min(E,N)}
+ p_{n>n_E} = \left. \sum_{i=n_E}^{N_E}{p_{iE} } \right|_{N_E = min(E,N)}
 \end{equation}
 
 
 Example if $N=100$ and $M=1000$ and the attacker has $E$ nodes, the probability that the attacker can prevent the network from reaching a consensus is:
 \begin{align*}
- M &= 200 & M &= 1000 & M &= 10000 \\
- N &= 60 & N &= 100 & N &= 100 \\
- E &= 60 & E &= 100 & E &= 500 \\
- n_E &= 21 & n_E &= 34 & n_E &= 34 \\
- p_{n \ge 20 } &= 0.199261 & p_{n \ge 34} &= 1.62609 \cdot 10^{-12} & p_{n \ge 34} &= 5.24507 \cdot 10^{-20}
-\end{align*}
+ M &= 31 & M &= 301 & M &= 1001 \\
+ N &= 11 & N &= 31 & N &= 101 \\
+ E &= 11 & E &= 31 & E &= 101 \\
+ n_E &= 4 & n_E &= 11 & n_E &= 34 \\
+ p_{n \ge 4} &\leq 0.42 & 
+ p_{n \ge 11} &\leq 1.86 \cdot 10^{-5} & 
+ p_{n \ge 34} &\leq 2.86 \cdot 10^{-12}
+	\end{align*}
 
 For an attacker to take over the network:
 \begin{align*}
- M &= 200 & M &= 1000 & M &= 10000 \\
- N &= 60 & N &= 100 & N &= 100 \\
- E &= 60 & E &= 100 & E &= 500 \\
- n_E &= 41 & n_E &= 67 & n_E &= 67 \\
- p_{n \ge 41 } &= 4.2687 \cdot 10^{-14} & p_{n \ge 67} &= 9.34035 \cdot 10^{-54} & p_{n \ge 67} &= 5.68532 \cdot 10^{-64}
+ M &= 31 & M &= 301 & M &= 1001 \\
+ N &= 11 & N &= 31 & N &= 101 \\
+ E &= 11 & E &= 31 & E &= 101 \\
+ n_E &= 4 & n_E &= 21 & n_E &= 68 \\
+ p_{n \ge 4 } &\leq 2.0 \cdot 10^{-3} & 
+ p_{n \ge 21} &\leq 1.2 \cdot 10^{-17} & 
+ p_{n \ge 68} &\leq 1.33 \cdot 10^{-54}
 \end{align*}
 
 
 If we have an epoch time of $10$ seconds and the probability is $10^{-53}$ then the evil attacker can take over the network every $10^{46}$ years or around $10^{36}$ the current age of the universe.
 
 Note.
-For a very large number of $M$ and $N$ the probability can be expressed as a logarithm formula to prevent numerical overflow.
+For a very large number of $M$ and $N$ the probability can be expressed as a logarithm formula to prevent numerical overflow.\\
 Combination expressed as a logarithm formula:
-\begin{equation}
+%\begin{equation}
 \begin{align*}
  \Phi (n,r) &= \sum_{k=r+1}^{n}{ln(k)} - \sum_{k=1}^{r}{ln(k)} \\
  C(n,r) &= e^{{\Phi}(n,r)}
 \end{align*}
-\end{equation}
+%\end{equation}
 
 
 The probability expresses as a logarithm:
 
-
-\begin{equation}
+%\begin{equation}
 \begin{align*}
 {\Pi}_{E_n} &= \left. \left( \sum_{i=0}^{n_E-1}{ln(p_{E_i})} - \sum_{i=n_E}^{N_E}{ln(1-p_{E_i})} \right) 
 \right|_{N_E = min(E,N)} \\
 p_{E_n} &= e^{({\Pi}_{E_n}+\Phi(N,n_E))}
 \end{align*}
-\end{equation}
+%\end{equation}
 
 
 If $M \gg n_E$ and $E \gg n_E$ the probability can be approximated to:
-\begin{equation}
+%\begin{equation}
 \begin{align*}
  p_{E_n} & \approx e^{(n_E \cdot ln(p_{E_0})-(N_E-n_E) \cdot (1-ln(P_{E_0})+\Phi(N,n_E)))} \\ 
          &\approx e^{((2 \cdot n_E - N_E) \cdot ln(p_{E_0}) + n_E - N_E + \Phi(N,n_E))} ~ 
- \text{for} ~ \frac{E}{M} \approx \frac{E-n_E}{M-n_E}
+ \text{for} ~ \frac{E-n_E}{M} \approx \frac{E-n_E}{M-n_E}
 \
 \end{align*}
-\end{equation}
+%\end{equation}
 
 \paragraph{Security conclusion\\}
 By having a volume of, e.g. $1000$ nodes and $100$ active nodes, which could be a possible amount for a network or shard, then the probability is so low that it will probably never occur in practice. Thus, the actual security is that the nodes are decentralised. Therefore, the node governance protocol is the actual security mechanism, because it regulates the uptake of nodes aiming for it to be democratic, meaning both decentralised and one physical person having only one node.  
+
+\begin{align}
+\frac{E-n}{M-n}\\
+\frac{M-(E-e)-n}{M-n} &= \frac{M-n}{M-n} - \frac{E-e}{M-n}
+\end{align}

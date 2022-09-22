@@ -1,0 +1,6 @@
+\begin{tabular}{<%- table.format %>}
+\hline
+<% table.forEach(function(rows) { %>
+<%- rows.join(' & ') %> \\
+\hline<% }); %>
+\end{tabular}
